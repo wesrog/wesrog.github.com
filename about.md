@@ -4,15 +4,25 @@ title: About
 permalink: /about/
 ---
 
-Well, hello there! This is the dumping ground of Wes's thoughts and musical
-compositions. It's very unlikely you'll find anything useful here and frankly,
-if you're reading this, I'm sorry.
+Hi, I'm Wes.
+
+I love writing elegant, efficient, and sensible code that is mirrored with
+functional and intuitive design. My work is best paired with a UX Designer as I
+love bringing life into designs.
+
+My professional experience ranges from full-stack to technical leadership. I
+have built multiple teams ranging in various technical disciplines as well as
+full fledged web applications.
+
+Here, you'll find a multitude of musings ranging from the technical to the
+frivolous.
 
 You'll also occassionally find music that I make here as well.
 
 ## About me
 ![me](/assets/me.jpg)
 
-I have been "writing software" since the early 2000s. I have now been a manager
-of software engineers since 2014 or so and try to keep up with writing software
-on the side when inspiration strikes me or when I'me excited by new technology.
+I have been writing software and designing websites since the early 2000s. I
+became a manager of engineers around 2014 and have been practicing that
+discpline now for almost 6 years. Alongside that, I work on projects at home to
+keep my skills fresh.
