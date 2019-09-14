@@ -2,6 +2,8 @@
 layout: post
 title: I Am Your Noisy Neighbor
 date: '2006-02-10T22:00:00-08:00'
+category:
+- music
 tags:
 - compositions
 - music
