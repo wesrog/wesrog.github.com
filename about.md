@@ -20,7 +20,8 @@ frivolous.
 You'll also occassionally find music that I make here as well.
 
 ## About me
-![me](/assets/me.jpg)
+![me](/assets/me.jpg "A picture of me smiling and holding a coffee mug that says
+'Poe me a cup'")
 
 I have been writing software and designing websites since the early 2000s. I
 became a manager of engineers around 2014 and have been practicing that
