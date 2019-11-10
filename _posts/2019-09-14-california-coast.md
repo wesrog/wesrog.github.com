@@ -4,7 +4,8 @@ title: California Coast
 date: '2019-09-14T21:49:16-07:00'
 category:
 - photography
-tags: [photography]
+tags:
+- photography
 ---
 
 I stumbled on this photo taken back in 2010 when Colleen and I drove from

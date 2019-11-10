@@ -8,7 +8,7 @@ tags: [webdev]
 Web development is a long-lost friend of mine. I started learning basic HTML and
 CSS way back in the late 90s when Netscape and IE were your only options. I had
 a lot of fun learning it and eventually applying the skills I learned to help
-other people and businesses build their presences.
+other people and businesses build their presences.<!--more-->
 
 As my career evolved, however, I grew into more of a back-end developer thanks
 to Rails and its opinionated goodness. And then I made my way into management.

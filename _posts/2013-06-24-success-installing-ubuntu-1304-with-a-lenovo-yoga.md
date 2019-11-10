@@ -7,12 +7,12 @@ tags:
 - ubuntu lenovo
 tumblr_url: https://633k.tumblr.com/post/53792337300/success-installing-ubuntu-1304-with-a-lenovo-yoga
 ---
-I spent an entire weekend installing Linux on my Lenovo Yoga 11s. I could’ve
-halved that time if I had just bit the bullet and installed Ubuntu. But, I had
-to first try Arch (kinda the reason I wanted to get a Linux laptop in the first
-place), then when the realtek wifi drivers wouldn’t work, I tried debian and
-then the drivers _still_ didn’t work so I just went with Ubuntu and compiled
-drivers from
+I spent an entire weekend installing Linux on my Lenovo Yoga 11s. <!--more-->I
+could’ve halved that time if I had just bit the bullet and installed Ubuntu.
+But, I had to first try Arch (kinda the reason I wanted to get a Linux laptop
+in the first place), then when the realtek wifi drivers wouldn’t work, I tried
+debian and then the drivers _still_ didn’t work so I just went with Ubuntu and
+compiled drivers from
 [https://github.com/lwfinger/rtl8723au](https://github.com/lwfinger/rtl8723au)
 
 The touchscreen stuff isn’t quite there yet. Touching the screen acts just like

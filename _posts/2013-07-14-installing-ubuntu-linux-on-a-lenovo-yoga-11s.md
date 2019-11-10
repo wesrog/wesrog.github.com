@@ -7,7 +7,7 @@ tumblr_url: https://633k.tumblr.com/post/55464266362/installing-ubuntu-linux-on-
 ---
 ![](https://66.media.tumblr.com/28307b04e8a8d86f8decca9429df1e1d/tumblr_inline_mpyb7zPQlu1qz4rgp.jpg)
 
-If you’re looking for a Linux laptop, I’d highly recommend the Lenovo Yoga 11s.
+If you’re looking for a Linux laptop, I’d highly recommend the Lenovo Yoga 11s.<!--more-->
 I picked up mine at a local Best Buy for $799. Here are the specs:
 
 - Intel Ivybridge Core i5 Processor (1.5GHz) x 4 cores

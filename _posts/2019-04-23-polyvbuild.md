@@ -9,7 +9,7 @@ tags: [bicycling]
 
 I'm building my own bike from parts! Not the actual frame, as some people
 thought. Also, I did not build the wheels. Jim at Gladys Bikes built them which
-I am super happy how they turned out.
+I am super happy how they turned out.<!--more-->
 
 I made several trips to Universale Cycles to pick up parts. I tried to do it all
 by bike.

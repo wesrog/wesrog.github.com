@@ -8,5 +8,4 @@ tags: []
 ---
  ![](/tumblr_files/tumblr_laywsw7LTF1qz70lno1_1280.jpg)  
 
-Fall Colors**
-
+Walking around and soaking up the vibrant fall colors.

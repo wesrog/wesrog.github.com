@@ -11,7 +11,7 @@ Colleen and I just finished the Fremont Express route for Portland's 2019 Bridge
 Pedal. It was a blast! Just around 40 miles or so total, out and back. I took my
 Lilac Polyvalent and Colleen took her All-City Space Horse. I would do it again,
 but it was kind of crowded in some parts, so I might opt for a more leisurely
-ride on some backroads with my camping gear with me.
+ride on some backroads with my camping gear with me.<!--more-->
 
 ![me on a bridge with my bike](/assets/bridgepedal.jpg)
 

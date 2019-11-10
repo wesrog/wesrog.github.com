@@ -8,7 +8,7 @@ tags: []
 If you aren't familiar with Ezra Caldwell, he is most recently known for
 (posthumously) the bikes he fabricated. I remember seeing pictures of super
 clean, beautifully built bicycles with wooden fenders and stumbled on Fast Boy
-Cycles. It was then that I became even more obsessed wih bikes.
+Cycles. It was then that I became even more obsessed wih bikes.<!--more-->
 
 I started reading more about who Ezra is and learned that he passed away from
 cancer. His works (both bicycles and photography) remain an inspiration to me
