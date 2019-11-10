@@ -39,4 +39,4 @@ and I can't wait to eventually land a career somewhere building intuitive and
 fresh interfaces.
 
 You can see the work I've done by visiting
-[VinoVoyage](http://www.vinovoyage.com/wineries)
+[VinoVoyage](https://www.vinovoyage.com)
