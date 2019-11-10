@@ -1,0 +1,32 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}" style="margin-top:10px">
+      <?xml version="1.0" encoding="UTF-8"?><svg width="62px" height="32px" viewBox="0 0 62 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Group 2</title><desc>Created with Sketch.</desc><g id="wes-rog-logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Group-2" fill-rule="nonzero"><polygon id="W" fill-opacity="0.4" fill="#323232" points="0 0 6.17951426 0 12.6842661 22.72 19.9324182 0 24.0675818 0 31.594509 22.1257143 37.8204857 0 44 0 34.4751848 32 29.2249208 32 21.9767687 10.6514286 14.7750792 32 9.1531151 32"></polygon><path d="M38,0 L49.4626866,0 C52.8059869,0 55.4402889,0.815229943 57.3656716,2.44571429 C59.2910544,4.07619863 60.2537313,6.49141257 60.2537313,9.69142857 C60.2537313,11.9162016 59.7910494,13.7371358 58.8656716,15.1542857 C57.9402939,16.5714357 56.6268742,17.7066624 54.9253731,18.56 L62,32 L55.5970149,32 L49.5522388,20.1142857 L43.7313433,20.1142857 L43.7313433,32 L38,32 L38,0 Z M47.4,16 L43,16 L43,5 L47.6340426,5 C49.8808623,5 51.5035411,5.46238476 52.5021277,6.38716814 C53.5007142,7.31195153 54,8.66665774 54,10.4513274 C54,14.150461 51.800022,16 47.4,16 Z" id="R-Copy" fill-opacity="0.8" fill="#A87DC5"></path></g></g></svg>
+    </a>
+
+    {%- if page_paths -%}
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </nav>
+    {%- endif -%}
+  </div>
+</header>
