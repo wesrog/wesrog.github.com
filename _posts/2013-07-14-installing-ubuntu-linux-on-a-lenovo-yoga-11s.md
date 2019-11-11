@@ -5,9 +5,11 @@ date: '2013-07-14T17:03:00-07:00'
 tags: []
 tumblr_url: https://633k.tumblr.com/post/55464266362/installing-ubuntu-linux-on-a-lenovo-yoga-11s
 ---
-![](https://66.media.tumblr.com/28307b04e8a8d86f8decca9429df1e1d/tumblr_inline_mpyb7zPQlu1qz4rgp.jpg)
-
 If you’re looking for a Linux laptop, I’d highly recommend the Lenovo Yoga 11s.<!--more-->
+
+![picture of a lenovo
+laptop](https://66.media.tumblr.com/28307b04e8a8d86f8decca9429df1e1d/tumblr_inline_mpyb7zPQlu1qz4rgp.jpg)
+
 I picked up mine at a local Best Buy for $799. Here are the specs:
 
 - Intel Ivybridge Core i5 Processor (1.5GHz) x 4 cores
@@ -60,13 +62,9 @@ easy. Here’s how:
 1. Using a computer with an internet connection, download this file
 [https://github.com/lwfinger/rtl8723au/archive/master.zip](https://github.com/lwfinger/rtl8723au/archive/master.zip)
 and put it on the USB stick you used for your Ubuntu install.
-
 2. Boot up Ubuntu and copy the zip file over. Unzip it and then open up a terminal.
-
 3. `cd` in to the rtl8723au directory and then type: `make`
-
 4. Once compiling is done, type: `make install`
-
 5. Reboot and then use the wifi icon in the system tray to select your network.
 
 If this doesn’t work for you, try updating your kernel to 3.8 or 3.9.
