@@ -7,13 +7,14 @@ categories:
 tags: [bicycling]
 ---
 
-Colleen and I just finished the Fremont Express route for Portland's 2019 Bridge
-Pedal. It was a blast! Just around 40 miles or so total, out and back. I took my
-Lilac Polyvalent and Colleen took her All-City Space Horse. I would do it again,
-but it was kind of crowded in some parts, so I might opt for a more leisurely
-ride on some backroads with my camping gear with me.<!--more-->
+Over the weekend, Colleen and I completed the Fremont Express route for
+Portland's 2019 Bridge Pedal.<!--more--> It was a blast! Just around 40 miles
+or so total, out and back. I took my Lilac Polyvalent and Colleen took her
+All-City Space Horse. I would do it again, but it was crowded in some parts, so
+I would rather opt for a more leisurely, country ride on some backroads with my
+camping gear with me.
 
-![me on a bridge with my bike](/assets/bridgepedal.jpg)
+![me on a bridge in Portland with my bike](/assets/bridgepedal.jpg)
 
 ## Route
 
