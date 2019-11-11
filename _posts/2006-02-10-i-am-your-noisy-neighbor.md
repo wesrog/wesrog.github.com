@@ -7,8 +7,11 @@ category:
 tags:
 - compositions
 - music
-tumblr_url: https://633k.tumblr.com/post/48949715/i-am-your-noisy-neighbor
 ---
+<audio controls>
+  <source src="/assets/music/im_your_noisy_neighbor.mp3">
+</audio><!--more-->
+
 It’s been a lifetime,
 
 A few hours or so.
@@ -16,8 +19,3 @@ A few hours or so.
 Cold, dark starlit smoke plays a past-time,
 
 Let me know.
-
-<audio controls>
-  <source src="/assets/music/im_your_noisy_neighbor.mp3">
-</audio>
-
