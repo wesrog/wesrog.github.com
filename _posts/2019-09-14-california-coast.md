@@ -13,4 +13,4 @@ Florida to Oregon to start anew. <!--more-->The picture brings back wonderful me
 it was the first time in the trip that we reached the west coast. I remember
 the wind was quite strong that day.
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/wesr/45862002064/in/dateposted-public/" title="California Coast"><img src="https://live.staticflickr.com/7882/45862002064_73697161d4_k.jpg" width="2048" height="1362" alt="California Coast"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/wesr/45862002064/in/dateposted-public/" title="California Coast"><img src="https://live.staticflickr.com/7882/45862002064_dc9187024a_c.jpg" width="800" height="532" alt="California Coast"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>

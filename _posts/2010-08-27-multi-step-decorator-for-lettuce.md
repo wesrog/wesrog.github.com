@@ -5,8 +5,8 @@ date: '2010-08-27T13:58:51-07:00'
 tags: []
 tumblr_url: https://633k.tumblr.com/post/1021434501/multi-step-decorator-for-lettuce
 ---
-Cucumber seriously has me spoiled. Lettuce is great, but it has a lot of
-catching up to do. I’m glad to see such active progress on it.<!--more-->
+Cucumber seriously has me spoiled.<!--more-->Lettuce is great, but it has a lot
+of catching up to do. I’m glad to see such active progress on it.
 
 One quick tip I wanted to give out was one of how to write steps that can be
 used with minor verbiage differences. For instance:

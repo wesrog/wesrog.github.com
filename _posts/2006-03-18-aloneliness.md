@@ -7,12 +7,11 @@ categories:
 tags:
 - compositions
 - music
-tumblr_url: https://633k.tumblr.com/post/48950471/aloneliness
 ---
 
 <audio controls>
   <source src="/assets/music/aloneliness.mp3">
-</audio>
+</audio><!--more-->
 
 I want to keep working on this track. I made it on a whim, like all my songs are
 made, and it’s hard to get back into it. Criticism always helps.
