@@ -5,9 +5,9 @@ date: '2008-11-20T15:57:00-08:00'
 tags: [music]
 ---
 I was unaware that zoviet france ceased creation of music. Rapoon is his new
-alias and I’m hooked. Dark ambient similar to Robert Rich, Biosphere (Geir
-Jennsen) and Steve Roach. It’s delectable. Perfect background music with a
-feeling that leaves you isolated and cold on a desolate plain.
+alias and I’m hooked. <!--more-->Dark ambient similar to Robert Rich, Biosphere
+(Geir Jennsen) and Steve Roach. It’s delectable. Perfect background music with
+a feeling that leaves you isolated and cold on a desolate plain.
 
 I was about to purchase a bunch of Rapoon’s album on iTunes, but found out that
 magnatune had most of it. So, I purchased a monthly subscription which is

@@ -5,6 +5,7 @@ date: '2010-08-03T11:45:08-07:00'
 tags:
 - testing
 - python
+- webdev
 ---
 Maybe I’m weird, but I don’t use Django. At my office, we’re using a home brew
 framework. One thing that is missing from our framework is good testing. I came
