@@ -5,7 +5,6 @@ date: '2013-06-24T15:40:00-07:00'
 tags:
 - linux
 - ubuntu lenovo
-tumblr_url: https://633k.tumblr.com/post/53792337300/success-installing-ubuntu-1304-with-a-lenovo-yoga
 ---
 I spent an entire weekend installing Linux on my Lenovo Yoga 11s. <!--more-->I
 could’ve halved that time if I had just bit the bullet and installed Ubuntu.

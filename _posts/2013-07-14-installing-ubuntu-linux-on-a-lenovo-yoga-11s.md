@@ -3,7 +3,6 @@ layout: post
 title: Installing Ubuntu Linux on a Lenovo Yoga 11s
 date: '2013-07-14T17:03:00-07:00'
 tags: []
-tumblr_url: https://633k.tumblr.com/post/55464266362/installing-ubuntu-linux-on-a-lenovo-yoga-11s
 ---
 If you’re looking for a Linux laptop, I’d highly recommend the Lenovo Yoga 11s.<!--more-->
 
