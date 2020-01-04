@@ -43,4 +43,4 @@ and I can't wait to eventually land somewhere building intuitive and fresh
 interfaces.
 
 You can see the work I've done by visiting
-[VinoVoyage](https://www.vinovoyage.com)
+[Vino Voyage](https://www.vinovoyage.com)
