@@ -35,9 +35,6 @@ const LOCAL_PATH_PREFIXES = [
 // Audio extensions — keep in public/, don't move
 const AUDIO_EXTS = new Set(['.mp3', '.m4a', '.ogg', '.wav', '.flac']);
 
-// Image extensions — the only files we move out of public/assets/
-const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.avif']);
-
 function isLocalImagePath(src) {
   const lsrc = src.toLowerCase();
   const ext = lsrc.slice(lsrc.lastIndexOf('.'));
