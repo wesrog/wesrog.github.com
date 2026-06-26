@@ -35,6 +35,9 @@ const LOCAL_PATH_PREFIXES = [
 // Audio extensions — keep in public/, don't move
 const AUDIO_EXTS = new Set(['.mp3', '.m4a', '.ogg', '.wav', '.flac']);
 
+// Image extensions — the only files we move out of public/assets/
+const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.avif']);
+
 function isLocalImagePath(src) {
   const lsrc = src.toLowerCase();
   const ext = lsrc.slice(lsrc.lastIndexOf('.'));
@@ -159,7 +162,7 @@ async function cleanupPublicDirs() {
     const assetFiles = await readdir(assetsDir);
     for (const f of assetFiles) {
       const ext = extname(f).toLowerCase();
-      if (!AUDIO_EXTS.has(ext) && f !== 'music') {
+      if (IMAGE_EXTS.has(ext)) {
         // It's an image file — should have been moved
         const target = join(assetsDir, f);
         if (DRY_RUN) {
