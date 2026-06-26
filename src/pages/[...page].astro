@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+const postSlug = (id: string) => id.replace(/\/index$/, '');
+
+export async function getStaticPaths({ paginate }) {
+  const posts = (await getCollection('blog', ({ data }) => !data.draft))
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return paginate(posts, { pageSize: 20 });
+}
+
+const { page } = Astro.props;
+
+const rendered = await Promise.all(page.data.map(async post => {
+  const { Content } = await render(post);
+  return { post, Content };
+}));
+---
+<BaseLayout title="WR">
+  <div class="wrapper">
+    <p class="intro">Listen to <a href="/tags/music/">music</a>, look at <a href="/tags/photography/">photography</a>, <a href="/tags/bicycles/">bicycles</a>, or read ramblings below.</p>
+    <ul class="post-list">
+      {rendered.map(({ post, Content }) => (
+        <li>
+          <time class="post-meta" datetime={post.data.date.toISOString()}>
+            {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          <a href={`/blog/${postSlug(post.id)}/`}>
+            <h2>{post.data.title}</h2>
+          </a>
+          <div class="post-content">
+            <Content />
+          </div>
+        </li>
+      ))}
+    </ul>
+    <nav class="pagination">
+      {page.url.prev ? <a href={page.url.prev}>← Newer</a> : <span />}
+      <span>Page {page.currentPage} of {page.lastPage}</span>
+      {page.url.next ? <a href={page.url.next}>Older →</a> : <span />}
+    </nav>
+  </div>
+</BaseLayout>
+
+<style>
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-list li {
+  margin-bottom: calc(var(--spacing) * 1.5);
+  padding-bottom: calc(var(--spacing) * 1.5);
+  border-bottom: 1px solid var(--color-border);
+}
+.post-list li:last-child { border-bottom: none; }
+time { display: block; }
+h2 { margin: 0.25em 0 0.5em; font-size: 1.25em; }
+a { text-decoration: none; color: var(--color-text); }
+a:hover h2 { text-decoration: underline; }
+a:visited { color: var(--color-text); }
+.intro { color: var(--color-muted); font-size: 0.95em; margin: 0 0 calc(var(--spacing) * 1.5); }
+.intro a { color: var(--color-link); }
+.intro a:visited { color: var(--color-link-visited); }
+.post-content { font-size: 0.9em; }
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing) 0;
+  border-top: 1px solid var(--color-border);
+  margin-top: calc(var(--spacing) * 1.5);
+  font-size: 0.9em;
+  color: var(--color-muted);
+}
+.pagination a { color: var(--color-link); text-decoration: none; }
+.pagination a:hover { text-decoration: underline; }
+</style>

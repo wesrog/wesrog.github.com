@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const postSlug = (id: string) => id.replace(/\/index$/, '');
+  const posts = await getCollection('private');
+  return posts.map(post => ({
+    params: { slug: postSlug(post.id) },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<BaseLayout title={post.data.title} description={post.data.description} noindex={true}>
+  <article class="wrapper">
+    <header>
+      <h1>{post.data.title}</h1>
+      <p>
+        <time class="post-meta" datetime={post.data.date.toISOString()}>
+          {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+      </p>
+    </header>
+    <Content />
+  </article>
+</BaseLayout>
+
+<style>
+h1 { margin-bottom: 0.25em; }
+header { margin-bottom: calc(var(--spacing) * 1.5); }
+article :global(img) { margin: 1em 0; }
+article :global(p) { margin: 0 0 1em; }
+</style>

@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const postSlug = (id: string) => id.replace(/\/index$/, '');
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const tags = [...new Set(posts.flatMap(p => p.data.tags))];
+  return tags.map(tag => ({
+    params: { tag },
+    props: {
+      posts: posts
+        .filter(p => p.data.tags.includes(tag))
+        .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    },
+  }));
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+<BaseLayout title={`#${tag}`}>
+  <div class="wrapper">
+    <h1>#{tag}</h1>
+    <ul class="post-list">
+      {posts.map(post => (
+        <li>
+          <time class="post-meta" datetime={post.data.date.toISOString()}>
+            {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          <a href={`/blog/${postSlug(post.id)}/`}>{post.data.title}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+h1 { margin-bottom: var(--spacing); }
+.post-list { list-style: none; padding: 0; }
+.post-list li { margin-bottom: 1em; }
+time { display: block; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+</style>
