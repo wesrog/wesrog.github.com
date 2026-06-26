@@ -86,6 +86,7 @@ async function migrateCollection(collectionPath) {
   console.log(`\nMigrating ${postFiles.length} posts in ${collectionPath}`);
 
   let moved = 0, skipped = 0, assetsTotal = 0;
+  const movedPublicPaths = new Set();
 
   for (const filename of postFiles) {
     const ext = extname(filename);
@@ -123,6 +124,7 @@ async function migrateCollection(collectionPath) {
       const srcAsset = join(PUBLIC, absPath);
       const destAsset = join(destDir, basename(absPath));
       await copyFile(srcAsset, destAsset);
+      movedPublicPaths.add(absPath);
       assetsTotal++;
     }
 
@@ -138,10 +140,10 @@ async function migrateCollection(collectionPath) {
   }
 
   console.log(`  Done: ${moved} posts moved, ${assetsTotal} assets co-located, ${skipped} skipped (dry-run).`);
-  return { moved, assetsTotal };
+  return { moved, assetsTotal, movedPublicPaths };
 }
 
-async function cleanupPublicDirs() {
+async function cleanupPublicDirs(allMovedAssets) {
   // Remove directories from public/ that should now be empty
   const toClean = ['tumblr_files', 'lastfmtagger', 'emusic_tags.png'];
   for (const name of toClean) {
@@ -156,14 +158,13 @@ async function cleanupPublicDirs() {
     }
   }
 
-  // Also remove individual image files from public/assets/ that were moved
+  // Only remove image files from public/assets/ that were actually co-located
   const assetsDir = join(PUBLIC, 'assets');
   if (existsSync(assetsDir)) {
     const assetFiles = await readdir(assetsDir);
     for (const f of assetFiles) {
-      const ext = extname(f).toLowerCase();
-      if (IMAGE_EXTS.has(ext)) {
-        // It's an image file — should have been moved
+      const absPath = `/assets/${f}`;
+      if (allMovedAssets.has(absPath)) {
         const target = join(assetsDir, f);
         if (DRY_RUN) {
           console.log(`[dry] Would remove public/assets/${f}`);
@@ -180,11 +181,12 @@ async function cleanupPublicDirs() {
 const blogDir = join(ROOT, 'src/content/blog');
 const privateDir = join(ROOT, 'src/content/private');
 
-await migrateCollection(blogDir);
-await migrateCollection(privateDir);
+const { movedPublicPaths: blogMoved } = await migrateCollection(blogDir);
+const { movedPublicPaths: privateMoved } = await migrateCollection(privateDir);
+const allMovedAssets = new Set([...blogMoved, ...privateMoved]);
 
 console.log('\nCleaning up public/ directories...');
-await cleanupPublicDirs();
+await cleanupPublicDirs(allMovedAssets);
 
 console.log('\nMigration complete.');
 if (!DRY_RUN) {
