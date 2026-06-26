@@ -1,0 +1,90 @@
+---
+---
+<div id="persistent-player" transition:persist style="display: none">
+  <span class="pp-title"></span>
+  <audio controls></audio>
+  <button class="pp-close" aria-label="Close player">✕</button>
+</div>
+
+<style>
+#persistent-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem var(--spacing);
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+.pp-title {
+  flex-shrink: 0;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.875em;
+  color: var(--color-muted);
+}
+#persistent-player audio {
+  flex: 1;
+  min-width: 0;
+}
+.pp-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 0.25em;
+  flex-shrink: 0;
+}
+</style>
+
+<script>
+function showBar() {
+  const bar = document.getElementById('persistent-player') as HTMLElement;
+  if (bar) {
+    bar.style.display = 'flex';
+    document.body.classList.add('player-active');
+  }
+}
+
+function hideBar() {
+  const bar = document.getElementById('persistent-player') as HTMLElement;
+  if (bar) {
+    bar.style.display = 'none';
+    document.body.classList.remove('player-active');
+  }
+}
+
+document.addEventListener('astro:page-load', () => {
+  const bar = document.getElementById('persistent-player') as HTMLElement;
+  if (!bar || bar.dataset.initialized) return;
+  bar.dataset.initialized = 'true';
+
+  const audio = bar.querySelector('audio') as HTMLAudioElement;
+  const titleEl = bar.querySelector('.pp-title') as HTMLElement;
+  const closeBtn = bar.querySelector('.pp-close') as HTMLButtonElement;
+
+  document.addEventListener('play-track', (e) => {
+    const { src, title } = (e as CustomEvent<{ src: string; title: string }>).detail;
+    const resolvedSrc = new URL(src, location.href).href;
+    if (audio.src === resolvedSrc && !audio.paused) return;
+    audio.src = src;
+    titleEl.textContent = title;
+    showBar();
+    audio.play().catch(() => {});
+  });
+
+  audio.addEventListener('ended', hideBar);
+
+  closeBtn.addEventListener('click', () => {
+    audio.pause();
+    hideBar();
+  });
+});
+</script>
