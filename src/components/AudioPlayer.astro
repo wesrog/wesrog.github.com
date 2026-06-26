@@ -1,0 +1,46 @@
+---
+interface Props {
+  src: string;
+}
+const { src } = Astro.props;
+---
+<div class="audio-player">
+  <button class="audio-play-btn" data-src={src}>▶ Play</button>
+  <span class="audio-now-playing" style="display: none">now playing ↓</span>
+</div>
+
+<style>
+.audio-player { margin: 1em 0; }
+.audio-play-btn {
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.4em 1em;
+  color: var(--color-text);
+  font-size: 1em;
+}
+.audio-now-playing {
+  color: var(--color-muted);
+  font-size: 0.875em;
+  font-style: italic;
+}
+</style>
+
+<script>
+function setupAudioPlayers() {
+  document.querySelectorAll<HTMLButtonElement>('.audio-play-btn:not([data-wired])').forEach(btn => {
+    btn.dataset.wired = 'true';
+    btn.addEventListener('click', () => {
+      const src = btn.dataset.src ?? '';
+      const title = document.querySelector('h1')?.textContent?.trim() ?? '';
+      document.dispatchEvent(new CustomEvent('play-track', { detail: { src, title } }));
+      btn.style.display = 'none';
+      const label = btn.nextElementSibling as HTMLElement | null;
+      if (label) label.style.display = '';
+    });
+  });
+}
+
+document.addEventListener('astro:page-load', setupAudioPlayers);
+</script>
