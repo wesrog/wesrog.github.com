@@ -26,29 +26,60 @@ const { title, description = 'Thoughts and waves from Wes Rogers.', noindex = fa
   </head>
   <body>
   <script>
-    import type { TransitionBeforePreparationEvent } from 'astro:transitions/client';
+    import type { TransitionBeforePreparationEvent, TransitionBeforeSwapEvent } from 'astro:transitions/client';
 
-    // Native View Transitions can capture the new-page screenshot before Astro's scrollTo() fires, leaving the page at 0.
-    let savedScrollY: number | null = null;
+    // Astro's ClientRouter stores scroll in history.state, but the native View Transitions
+    // API can capture the new-page screenshot before scrollTo() takes effect. This uses
+    // sessionStorage as an independent save/restore layer so back-nav restores correctly.
+
+    const scrollKey = (href: string) => `scroll:${new URL(href).pathname}`;
+    let pendingScrollY: number | null = null;
+    let isNavigating = false;
+    let scrollTimer: ReturnType<typeof setTimeout> | undefined;
+
+    function saveScroll(href: string) {
+      try { sessionStorage.setItem(scrollKey(href), String(window.scrollY)); } catch {}
+    }
+    function getSavedScroll(href: string): number | null {
+      try { const v = sessionStorage.getItem(scrollKey(href)); return v !== null ? Number(v) : null; } catch { return null; }
+    }
+
+    // Debounced scroll tracking — this module runs once, no duplicate listeners.
+    window.addEventListener('scroll', () => {
+      if (isNavigating) return;
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => saveScroll(location.href), 100);
+    }, { passive: true });
 
     document.addEventListener('astro:before-preparation', (e: Event) => {
       const event = e as TransitionBeforePreparationEvent;
-      if (event.navigationType === 'traverse') {
-        savedScrollY = (history.state?.scrollY as number) ?? 0;
-      }
+      isNavigating = true;
+      // Use event.from (not location.href) — for traversals popstate has already changed location.
+      saveScroll(event.from.href);
+      pendingScrollY = event.navigationType === 'traverse'
+        ? getSavedScroll(event.to.href)
+        : null;
+    });
+
+    document.addEventListener('astro:before-swap', (e: Event) => {
+      if (pendingScrollY === null) return;
+      const scrollY = pendingScrollY;
+      // Restore after the VT animation completes in case the animation overrides scroll.
+      (e as TransitionBeforeSwapEvent).viewTransition.finished
+        .then(() => requestAnimationFrame(() => window.scrollTo({ top: scrollY, behavior: 'instant' })))
+        .catch(() => {});
     });
 
     document.addEventListener('astro:after-swap', () => {
-      if (savedScrollY !== null) {
-        window.scrollTo({ top: savedScrollY, behavior: 'instant' });
-      }
+      if (pendingScrollY !== null) window.scrollTo({ top: pendingScrollY, behavior: 'instant' });
     });
 
     document.addEventListener('astro:page-load', () => {
-      if (savedScrollY !== null) {
-        window.scrollTo({ top: savedScrollY, behavior: 'instant' });
-        savedScrollY = null;
+      if (pendingScrollY !== null) {
+        window.scrollTo({ top: pendingScrollY, behavior: 'instant' });
+        pendingScrollY = null;
       }
+      isNavigating = false;
     });
   </script>
     <Header />
