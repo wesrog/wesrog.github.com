@@ -1,0 +1,46 @@
+---
+---
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">
+      <svg width="62" height="32" viewBox="0 0 62 32" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="logo-w" fill-opacity="0.4" points="0 0 6.17951426 0 12.6842661 22.72 19.9324182 0 24.0675818 0 31.594509 22.1257143 37.8204857 0 44 0 34.4751848 32 29.2249208 32 21.9767687 10.6514286 14.7750792 32 9.1531151 32"></polygon>
+        <path class="logo-r" fill-opacity="0.8" d="M38,0 L49.4626866,0 C52.8059869,0 55.4402889,0.815229943 57.3656716,2.44571429 C59.2910544,4.07619863 60.2537313,6.49141257 60.2537313,9.69142857 C60.2537313,11.9162016 59.7910494,13.7371358 58.8656716,15.1542857 C57.9402939,16.5714357 56.6268742,17.7066624 54.9253731,18.56 L62,32 L55.5970149,32 L49.5522388,20.1142857 L43.7313433,20.1142857 L43.7313433,32 L38,32 L38,0 Z M47.4,16 L43,16 L43,5 L47.6340426,5 C49.8808623,5 51.5035411,5.46238476 52.5021277,6.38716814 C53.5007142,7.31195153 54,8.66665774 54,10.4513274 C54,14.150461 51.800022,16 47.4,16 Z"></path>
+      </svg>
+    </a>
+    <nav>
+      <a href="/">Posts</a>
+      <a href="/about">About</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+.site-header {
+  border-top: 4px solid var(--color-header-top);
+  border-bottom: 1px solid var(--color-border);
+  padding: 15px 0;
+  margin-bottom: var(--spacing);
+}
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-text);
+}
+.site-title:visited { color: var(--color-text); }
+nav a {
+  margin-left: 1em;
+  text-decoration: none;
+  color: var(--color-text);
+}
+nav a:visited { color: var(--color-text); }
+nav a:hover { text-decoration: underline; }
+.logo-w { fill: var(--color-text); }
+.logo-r { fill: var(--color-link); }
+</style>
