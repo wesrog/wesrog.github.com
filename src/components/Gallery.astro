@@ -1,14 +1,25 @@
 ---
+import type { ImageMetadata } from 'astro';
+
 interface ImageEntry {
-  src: string;
+  src: ImageMetadata | string;
   caption?: string;
 }
 interface Props {
-  images: (string | ImageEntry)[];
+  images: (ImageMetadata | string | ImageEntry)[];
 }
 const { images } = Astro.props;
 const uid = Math.random().toString(36).slice(2, 8);
-const normalized = images.map(img => typeof img === 'string' ? { src: img } : img);
+
+function normalize(img: ImageMetadata | string | ImageEntry): { src: string; caption?: string } {
+  if (typeof img === 'string') return { src: img };
+  if ('width' in img) return { src: (img as ImageMetadata).src };
+  const entry = img as ImageEntry;
+  const src = typeof entry.src === 'string' ? entry.src : (entry.src as ImageMetadata).src;
+  return { src, caption: entry.caption };
+}
+
+const normalized = images.map(normalize);
 ---
 <div class="gallery" data-uid={uid}>
   {normalized.map((img, i) => (
