@@ -25,6 +25,32 @@ const { title, description = 'Thoughts and waves from Wes Rogers.', noindex = fa
     <ClientRouter />
   </head>
   <body>
+  <script>
+    import type { TransitionBeforePreparationEvent } from 'astro:transitions/client';
+
+    // Native View Transitions can capture the new-page screenshot before Astro's scrollTo() fires, leaving the page at 0.
+    let savedScrollY: number | null = null;
+
+    document.addEventListener('astro:before-preparation', (e: Event) => {
+      const event = e as TransitionBeforePreparationEvent;
+      if (event.navigationType === 'traverse') {
+        savedScrollY = (history.state?.scrollY as number) ?? 0;
+      }
+    });
+
+    document.addEventListener('astro:after-swap', () => {
+      if (savedScrollY !== null) {
+        window.scrollTo({ top: savedScrollY, behavior: 'instant' });
+      }
+    });
+
+    document.addEventListener('astro:page-load', () => {
+      if (savedScrollY !== null) {
+        window.scrollTo({ top: savedScrollY, behavior: 'instant' });
+        savedScrollY = null;
+      }
+    });
+  </script>
     <Header />
     <main>
       <slot />
