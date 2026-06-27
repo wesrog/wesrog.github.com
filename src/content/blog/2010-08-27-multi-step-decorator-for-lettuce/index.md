@@ -10,7 +10,7 @@ of catching up to do. I’m glad to see such active progress on it.
 One quick tip I wanted to give out was one of how to write steps that can be
 used with minor verbiage differences. For instance:
 
-```
+```cucumber
 Scenario: Make a new post
     Given I am logged out
     When I follow "/posts/new"
@@ -23,7 +23,7 @@ it happen. Essentially what you want to do is to create a capture group so you
 can group some or’s, but not actually use the capture group. You can achieve
 this by using “?:”. The lettuce step looks like this:
 
-```
+```python
 @step(u'(?:Then|And) I should see "(.*)"')
 def i_should_see(step, text):
     world.res.mustcontain(text)
