@@ -1,19 +1,25 @@
 ---
+interface ImageEntry {
+  src: string;
+  caption?: string;
+}
 interface Props {
-  images: string[];
+  images: (string | ImageEntry)[];
 }
 const { images } = Astro.props;
 const uid = Math.random().toString(36).slice(2, 8);
+const normalized = images.map(img => typeof img === 'string' ? { src: img } : img);
 ---
 <div class="gallery" data-uid={uid}>
-  {images.map((src, i) => (
-    <button class="gallery-btn" data-src={src} data-index={i}>
-      <img src={src} loading="lazy" alt="" />
+  {normalized.map((img, i) => (
+    <button class="gallery-btn" data-src={img.src} data-caption={img.caption ?? ''} data-index={i}>
+      <img src={img.src} loading="lazy" alt={img.caption ?? ''} />
     </button>
   ))}
 </div>
 <dialog class="lightbox" id={`lb-${uid}`}>
   <img src="" alt="" />
+  <p class="caption"></p>
 </dialog>
 
 <script>
@@ -21,10 +27,14 @@ const uid = Math.random().toString(36).slice(2, 8);
     const uid = gallery.dataset.uid!;
     const dialog = document.getElementById(`lb-${uid}`) as HTMLDialogElement;
     const lightboxImg = dialog.querySelector('img') as HTMLImageElement;
+    const captionEl = dialog.querySelector('.caption') as HTMLParagraphElement;
 
     gallery.querySelectorAll<HTMLElement>('.gallery-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         lightboxImg.src = btn.dataset.src!;
+        const caption = btn.dataset.caption ?? '';
+        captionEl.textContent = caption;
+        captionEl.style.display = caption ? '' : 'none';
         dialog.showModal();
       });
     });
@@ -66,9 +76,16 @@ const uid = Math.random().toString(36).slice(2, 8);
 }
 .lightbox img {
   max-width: 92vw;
-  max-height: 92vh;
+  max-height: calc(92vh - 3em);
   object-fit: contain;
   display: block;
+}
+.caption {
+  color: #fff;
+  font-size: 0.85em;
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 0;
 }
 .lightbox::backdrop { background: var(--color-overlay); }
 </style>
