@@ -1,9 +1,9 @@
 ---
-title: 'Vehicle, first pass'
-date: '2008-11-09'
+title: "Vehicle, first pass"
+date: "2008-11-09"
 tags:
   - music
-  - 'audio,'
+  - audio
 ---
 
 Vehicle, the first song recorded with FourTrack (iPhone app). Post-processing

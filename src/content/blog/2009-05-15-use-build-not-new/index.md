@@ -1,14 +1,15 @@
 ---
 title: 'Use "build", Not "new"'
-date: '2009-05-15'
+date: "2009-05-15"
 ---
+
 When working with multiple models and forms in Rails, your associations need to
 use `build` instead of `new`. I never knew there was a distinction between the
-two. Apparently, I was wrong :\ 
+two. Apparently, I was wrong :\
 
 For example, this will not work when trying to validate the associations:
 
-```
+```ruby
 @account = Account.new(params[:account])
 @user = @account.users.new(params[:user])
 ```
@@ -19,7 +20,7 @@ saved, but the `@user` won’t be if it fails validation.
 Using the `build` method will automatically take care of the transactional part
 for us so the `@account` object won’t be saved until both models are valid:
 
-```
+```ruby
 @account = Account.new(params[:account])
 @user = @account.users.build(params[:user])
 ```
@@ -27,4 +28,3 @@ for us so the `@account` object won’t be saved until both models are valid:
 It’s handy in the controller too. Instead of calling both `@account.save` and
 `@user.save`, you simply call `@account.save` and it saves the `@user`
 association.
-

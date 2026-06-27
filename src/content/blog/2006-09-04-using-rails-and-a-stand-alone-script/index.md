@@ -1,6 +1,6 @@
 ---
 title: Using Rails and a stand-alone script
-date: '2006-09-04'
+date: "2006-09-04"
 tags:
   - programming
   - rubyonrails
@@ -11,7 +11,7 @@ A challenge was presented to me with my most recent project. Setup a script to r
 
 Keep in mind that you need the spreadsheet-excel gem. Install it via:
 
-```
+```bash
 gem install spreadsheet-excel
 ```
 
