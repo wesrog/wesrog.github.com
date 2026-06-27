@@ -66,12 +66,7 @@ pre {
   overflow-x: auto;
 }
 pre code { padding: 0; background: none; }
-/* Shiki syntax highlighted blocks */
-.astro-code {
-  padding: var(--spacing);
-  overflow-x: auto;
-  border-radius: 3px;
-}
+.astro-code { padding: var(--spacing); overflow-x: auto; }
 
 blockquote {
   border-left: 4px solid var(--color-border);
