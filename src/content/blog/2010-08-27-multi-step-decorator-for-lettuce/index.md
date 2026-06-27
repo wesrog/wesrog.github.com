@@ -4,7 +4,7 @@ date: '2010-08-27'
 tags:
   - webdev
 ---
-Cucumber seriously has me spoiled.Lettuce is great, but it has a lot
+Cucumber seriously has me spoiled. Lettuce is great, but it has a lot
 of catching up to do. I’m glad to see such active progress on it.
 
 One quick tip I wanted to give out was one of how to write steps that can be
