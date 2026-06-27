@@ -23,18 +23,18 @@ Forget SOAP and XML-RPC, get REST’ed! I will show you how I went about pulling
     
     file.
 
-```
-
+```ruby
 # welcome_controller.rb
 def city
- appid = "myYahooDeveloperAppID"
- url = "http://api.local.yahoo.com/MapsService/V1/geocode?appid=#{appid}&location=90210"
- @results = REXML::Document.new(Net::HTTP.get(URI(url)))
+  appid = "myYahooDeveloperAppID"
+  url = "http://api.local.yahoo.com/MapsService/V1/geocode?appid=#{appid}&location=90210"
+  @results = REXML::Document.new(Net::HTTP.get(URI(url)))
 end
 ```
 
+```ruby
 # views/welcome/city.rhtml
 @results.root.each_element { |city| "#{city[3].text}" }
-</code></pre>
+```
 
 There you go. Can you believe it’s that easy?
