@@ -40,18 +40,30 @@ const normalized = images.map(normalize);
     const lightboxImg = dialog.querySelector('img') as HTMLImageElement;
     const captionEl = dialog.querySelector('.caption') as HTMLParagraphElement;
 
-    gallery.querySelectorAll<HTMLElement>('.gallery-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        lightboxImg.src = btn.dataset.src!;
-        const caption = btn.dataset.caption ?? '';
-        captionEl.textContent = caption;
-        captionEl.style.display = caption ? '' : 'none';
-        dialog.showModal();
-      });
+    const btns = Array.from(gallery.querySelectorAll<HTMLElement>('.gallery-btn'));
+    let currentIndex = 0;
+
+    function openAt(index: number) {
+      currentIndex = index;
+      const btn = btns[index];
+      lightboxImg.src = btn.dataset.src!;
+      const caption = btn.dataset.caption ?? '';
+      captionEl.textContent = caption;
+      captionEl.style.display = caption ? '' : 'none';
+      if (!dialog.open) dialog.showModal();
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener('click', () => openAt(i));
     });
 
     dialog.addEventListener('click', e => {
       if (e.target === dialog) dialog.close();
+    });
+
+    dialog.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') openAt((currentIndex + 1) % btns.length);
+      if (e.key === 'ArrowLeft') openAt((currentIndex - 1 + btns.length) % btns.length);
     });
   });
 </script>
