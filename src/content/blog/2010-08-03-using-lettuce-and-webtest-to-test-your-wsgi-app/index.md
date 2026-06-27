@@ -47,7 +47,7 @@ def i_should_see(step, text):
     text in world.response
 ```
 
-It's simple, really. The only trickery was to use the @before.all decorator to
+It's simple, really. The only trickery was to use the `@before.all` decorator to
 set the world browser as WebTest's TestApp. From that point on, I can use
 WebTest like normal.
 
