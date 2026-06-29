@@ -1,6 +1,8 @@
 ---
 title: Sunset
-date: '2008-06-16'
+date: "2008-06-16"
+tags:
+  - photography
 ---
 
 ![](./aXuJeHmz7ab5mocuc0aLEn83_1280.jpg)
