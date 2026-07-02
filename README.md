@@ -1,6 +1,6 @@
 # wesrog.github.io
 
-Wes Rogers' personal blog, built with [Astro](https://astro.build).
+Wes Rogers' personal blog ([wesrog.github.io](https://wesrog.github.io)), built with [Astro](https://astro.build).
 
 ## Commands
 
