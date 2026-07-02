@@ -20,4 +20,4 @@ camping gear with me.
 Here's the route we took. This includes the ride to the starting point and back.
 It also includes a brunch stop off at Sweedeedee.
 
-<iframe src="https://ridewithgps.com/embeds?type=trip&amp;id=38469061&amp;title=Fremont%20Express%20Route&amp;sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
+<iframe src="https://ridewithgps.com/embeds?type=trip&amp;id=38469061&amp;title=Fremont%20Express%20Route&amp;sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no" loading="lazy"></iframe>
