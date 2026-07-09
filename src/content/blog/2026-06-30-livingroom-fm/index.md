@@ -19,4 +19,4 @@ possible. Imagine if Slack/Discord allowed real-time audio streaming.
 
 Check it out here: https://livingroom-fm.fly.dev/ and come browse human-curated music!
 
-![screenshot of livingroom.fm UI](image.png)
+![screenshot of livingroom.fm UI](image-1.png)
