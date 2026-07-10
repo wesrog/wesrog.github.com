@@ -3,7 +3,6 @@ title: Last.fm Tagger 1.1
 date: '2008-06-06'
 tags:
   - lastfm
-  - lastfmtagger
   - mac
   - programming
   - ruby

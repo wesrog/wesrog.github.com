@@ -1,6 +1,8 @@
 ---
 title: "Wind Vane: This was taken at my grandmother's house."
 date: '2008-09-05'
+tags:
+  - photography
 ---
 
 ![](./aXuJeHmz7dhlnkzaWZ3orSiT_1280.jpg)

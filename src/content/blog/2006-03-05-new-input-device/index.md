@@ -2,9 +2,8 @@
 title: "New Input Device!"
 date: '2006-03-05'
 tags:
-  - computers
   - gadgets
-  - geek
+  - misc
 ---
 
 It’s been a while since I changed my mouse. I’ve been attached to the Intellimouse for years now, but I finally made the [switch](http://www.logitech.com/index.cfm/products/details/US/EN,CRID=3,CONTENTID=9340).

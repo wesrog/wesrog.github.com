@@ -21,12 +21,14 @@
 ## File Map
 
 **Created:**
+
 - `scripts/migrate-to-colocation.mjs` — one-shot migration script
 - `src/content/blog/<slug>/index.{md,mdx}` — all 570 blog posts (new home)
 - `src/content/blog/<slug>/<asset>` — images moved out of `public/`
 - `src/content/private/<slug>/index.md` — all 31 private posts (new home)
 
 **Modified:**
+
 - `src/pages/blog/[...slug].astro` — strip `/index` from `post.id` for URL param
 - `src/pages/rss.xml.ts` — same strip
 - `src/pages/tags/[tag].astro` — same strip
@@ -34,6 +36,7 @@
 - 4 MDX posts — update component import depth from `../../` to `../../../`
 
 **Deleted (after migration):**
+
 - All original flat `.md`/`.mdx` files in `src/content/blog/` and `src/content/private/`
 - `public/tumblr_files/` directory (all files moved into content)
 - `public/assets/*.jpg` and `public/assets/polyvbuild*.jpg` (moved into content)
@@ -49,12 +52,14 @@ With `index.md` files inside per-post directories, Astro's glob loader produces 
 to strip the `/index` suffix. Do this first so you can test the build independently.
 
 **Files:**
+
 - Modify: `src/pages/blog/[...slug].astro`
 - Modify: `src/pages/rss.xml.ts`
 - Modify: `src/pages/tags/[tag].astro`
 - Modify: `src/pages/[...page].astro`
 
 **Interfaces:**
+
 - Produces: helper `const postSlug = (id: string) => id.replace(/\/index$/, '')` used in all four files
 
 - [ ] **Step 1: Update `[...slug].astro`**
@@ -111,21 +116,22 @@ article :global(p) { margin: 0 0 1em; }
 - [ ] **Step 2: Update `rss.xml.ts`**
 
 ```ts
-import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
-import type { APIContext } from 'astro';
+import rss from "@astrojs/rss";
+import { getCollection } from "astro:content";
+import type { APIContext } from "astro";
 
-const postSlug = (id: string) => id.replace(/\/index$/, '');
+const postSlug = (id: string) => id.replace(/\/index$/, "");
 
 export async function GET(context: APIContext) {
-  const posts = (await getCollection('blog', ({ data }) => !data.draft))
-    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
 
   return rss({
-    title: 'WR',
-    description: 'Thoughts and waves from Wes Rogers.',
+    title: "WR",
+    description: "Thoughts and waves from Wes Rogers.",
     site: context.site!,
-    items: posts.map(post => ({
+    items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.date,
       description: post.data.description,
@@ -212,7 +218,7 @@ const rendered = await Promise.all(page.data.map(async post => {
 ---
 <BaseLayout title="WR">
   <div class="wrapper">
-    <p class="intro">Listen to <a href="/tags/music/">music</a>, look at <a href="/tags/photography/">photography</a>, <a href="/tags/bicycles/">bicycles</a>, or read ramblings below.</p>
+    <p class="intro">Listen to <a href="/tags/music-composition/">music</a>, look at <a href="/tags/photography/">photography</a>, <a href="/tags/bicycles/">bicycles</a>, or read ramblings below.</p>
     <ul class="post-list">
       {rendered.map(({ post, Content }) => (
         <li>
@@ -296,9 +302,11 @@ git commit -m "feat: strip /index suffix from post IDs for URL generation"
 ## Task 2: Write the migration script
 
 **Files:**
+
 - Create: `scripts/migrate-to-colocation.mjs`
 
 **Interfaces:**
+
 - Consumes: `src/content/blog/*.{md,mdx}`, `src/content/private/*.{md,mdx}`, `public/` asset files
 - Produces: per-post directories with `index.{md,mdx}` and co-located image files; removes originals
 
@@ -326,34 +334,42 @@ ls scripts/
 //  7. Writes content to <slug>/index.<ext>
 //  8. Deletes the original file
 
-import { readdir, readFile, writeFile, mkdir, copyFile, unlink, rm } from 'fs/promises';
-import { existsSync } from 'fs';
-import { join, basename, extname, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import {
+  readdir,
+  readFile,
+  writeFile,
+  mkdir,
+  copyFile,
+  unlink,
+  rm,
+} from "fs/promises";
+import { existsSync } from "fs";
+import { join, basename, extname, dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..');
-const PUBLIC = join(ROOT, 'public');
-const DRY_RUN = process.argv.includes('--dry-run');
+const ROOT = join(__dirname, "..");
+const PUBLIC = join(ROOT, "public");
+const DRY_RUN = process.argv.includes("--dry-run");
 
-if (DRY_RUN) console.log('[DRY RUN] No files will be written or deleted.\n');
+if (DRY_RUN) console.log("[DRY RUN] No files will be written or deleted.\n");
 
 // All local path prefixes that live under public/ and should be co-located
 const LOCAL_PATH_PREFIXES = [
-  '/tumblr_files/',
-  '/assets/',       // images only — audio stays in public/
-  '/emusic_tags.png',
-  '/lastfmtagger/',
+  "/tumblr_files/",
+  "/assets/", // images only — audio stays in public/
+  "/emusic_tags.png",
+  "/lastfmtagger/",
 ];
 
 // Audio extensions — keep in public/, don't move
-const AUDIO_EXTS = new Set(['.mp3', '.m4a', '.ogg', '.wav', '.flac']);
+const AUDIO_EXTS = new Set([".mp3", ".m4a", ".ogg", ".wav", ".flac"]);
 
 function isLocalImagePath(src) {
   const lsrc = src.toLowerCase();
-  const ext = lsrc.slice(lsrc.lastIndexOf('.'));
+  const ext = lsrc.slice(lsrc.lastIndexOf("."));
   if (AUDIO_EXTS.has(ext)) return false;
-  return LOCAL_PATH_PREFIXES.some(prefix => src.startsWith(prefix));
+  return LOCAL_PATH_PREFIXES.some((prefix) => src.startsWith(prefix));
 }
 
 // Extract all local image paths from markdown/MDX content
@@ -392,11 +408,13 @@ function rewriteMdxImportDepth(content) {
 
 async function migrateCollection(collectionPath) {
   const entries = await readdir(collectionPath);
-  const postFiles = entries.filter(f => /\.(md|mdx)$/.test(f));
+  const postFiles = entries.filter((f) => /\.(md|mdx)$/.test(f));
 
   console.log(`\nMigrating ${postFiles.length} posts in ${collectionPath}`);
 
-  let moved = 0, skipped = 0, assetsTotal = 0;
+  let moved = 0,
+    skipped = 0,
+    assetsTotal = 0;
 
   for (const filename of postFiles) {
     const ext = extname(filename);
@@ -405,23 +423,29 @@ async function migrateCollection(collectionPath) {
     const destDir = join(collectionPath, slug);
     const destFile = join(destDir, `index${ext}`);
 
-    let content = await readFile(srcFile, 'utf8');
+    let content = await readFile(srcFile, "utf8");
     const imagePaths = extractLocalImagePaths(content);
 
     // Check all referenced images exist in public/
-    const missingAssets = imagePaths.filter(p => !existsSync(join(PUBLIC, p)));
+    const missingAssets = imagePaths.filter(
+      (p) => !existsSync(join(PUBLIC, p)),
+    );
     if (missingAssets.length > 0) {
-      console.warn(`  WARN ${slug}: missing public assets: ${missingAssets.join(', ')}`);
+      console.warn(
+        `  WARN ${slug}: missing public assets: ${missingAssets.join(", ")}`,
+      );
     }
 
-    const availableAssets = imagePaths.filter(p => existsSync(join(PUBLIC, p)));
+    const availableAssets = imagePaths.filter((p) =>
+      existsSync(join(PUBLIC, p)),
+    );
 
     if (DRY_RUN) {
       console.log(`  [dry] ${slug}/`);
       for (const p of availableAssets) {
         console.log(`    copy public${p} → ${slug}/${basename(p)}`);
       }
-      if (ext === '.mdx') console.log(`    rewrite MDX import depth`);
+      if (ext === ".mdx") console.log(`    rewrite MDX import depth`);
       skipped++;
       continue;
     }
@@ -439,22 +463,24 @@ async function migrateCollection(collectionPath) {
 
     // Rewrite content
     content = rewritePaths(content, availableAssets);
-    if (ext === '.mdx') {
+    if (ext === ".mdx") {
       content = rewriteMdxImportDepth(content);
     }
 
-    await writeFile(destFile, content, 'utf8');
+    await writeFile(destFile, content, "utf8");
     await unlink(srcFile);
     moved++;
   }
 
-  console.log(`  Done: ${moved} posts moved, ${assetsTotal} assets co-located, ${skipped} skipped (dry-run).`);
+  console.log(
+    `  Done: ${moved} posts moved, ${assetsTotal} assets co-located, ${skipped} skipped (dry-run).`,
+  );
   return { moved, assetsTotal };
 }
 
 async function cleanupPublicDirs() {
   // Remove directories from public/ that should now be empty
-  const toClean = ['tumblr_files', 'lastfmtagger', 'emusic_tags.png'];
+  const toClean = ["tumblr_files", "lastfmtagger", "emusic_tags.png"];
   for (const name of toClean) {
     const target = join(PUBLIC, name);
     if (existsSync(target)) {
@@ -468,12 +494,12 @@ async function cleanupPublicDirs() {
   }
 
   // Also remove individual image files from public/assets/ that were moved
-  const assetsDir = join(PUBLIC, 'assets');
+  const assetsDir = join(PUBLIC, "assets");
   if (existsSync(assetsDir)) {
     const assetFiles = await readdir(assetsDir);
     for (const f of assetFiles) {
       const ext = extname(f).toLowerCase();
-      if (!AUDIO_EXTS.has(ext) && f !== 'music') {
+      if (!AUDIO_EXTS.has(ext) && f !== "music") {
         // It's an image file — should have been moved
         const target = join(assetsDir, f);
         if (DRY_RUN) {
@@ -488,18 +514,18 @@ async function cleanupPublicDirs() {
 }
 
 // Main
-const blogDir = join(ROOT, 'src/content/blog');
-const privateDir = join(ROOT, 'src/content/private');
+const blogDir = join(ROOT, "src/content/blog");
+const privateDir = join(ROOT, "src/content/private");
 
 await migrateCollection(blogDir);
 await migrateCollection(privateDir);
 
-console.log('\nCleaning up public/ directories...');
+console.log("\nCleaning up public/ directories...");
 await cleanupPublicDirs();
 
-console.log('\nMigration complete.');
+console.log("\nMigration complete.");
 if (!DRY_RUN) {
-  console.log('Run `npm run build` to verify.');
+  console.log("Run `npm run build` to verify.");
 }
 ```
 
@@ -529,6 +555,7 @@ node scripts/migrate-to-colocation.mjs --dry-run 2>&1 | grep -A5 "cannon-beach"
 ```
 
 Expected output:
+
 ```
   [dry] 2010-02-22-cannon-beach/
     copy public/tumblr_files/tumblr_ky8co43EZv1qz70lno1_1280.jpg → 2010-02-22-cannon-beach/tumblr_ky8co43EZv1qz70lno1_1280.jpg
@@ -591,6 +618,7 @@ ls src/content/blog/2010-02-22-cannon-beach/
 ```
 
 Expected:
+
 ```
 index.md
 tumblr_ky8co43EZv1qz70lno1_1280.jpg
@@ -694,6 +722,7 @@ No commit needed — verification only.
 ## Self-Review
 
 **Spec coverage:**
+
 - ✅ All blog posts converted to folder layout
 - ✅ All private posts converted to folder layout
 - ✅ Images from `tumblr_files`, `assets/`, `emusic_tags.png`, `lastfmtagger/` co-located
@@ -705,5 +734,6 @@ No commit needed — verification only.
 **Placeholder scan:** None found.
 
 **Type consistency:**
+
 - `postSlug(id)` helper is defined locally in each page file — consistent name across all four.
 - `post.id` usage: all replaced with `postSlug(post.id)` in URL positions; `post.id` still used correctly for non-URL purposes (collection lookups).

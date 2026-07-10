@@ -1,6 +1,9 @@
 ---
 title: "Dunkin' Pepto?: "
 date: '2010-08-31'
+tags:
+  - photography
+  - misc
 ---
 
 ![](./tumblr_l80ghnSN5Q1qz70lno1_640.jpg)

@@ -3,7 +3,7 @@ title: More PATRIOT Act Love
 date: '2006-01-31'
 tags:
   - politics
-  - rant
+  - misc
 ---
 
 I assume this has to do with the PATRIOT Act. More invasion of privacy. And for what? What will this solve? As stated in the article:

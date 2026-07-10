@@ -3,12 +3,10 @@ title: Last.fm Cocoa Tagger v1.2
 date: '2008-08-20'
 tags:
   - lastfm
-  - lastfmtagger
   - mac
   - programming
   - ruby
   - software
-  - rubycocoa
 ---
 
 I added some new features including:

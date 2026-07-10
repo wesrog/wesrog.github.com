@@ -4,7 +4,7 @@ date: '2008-09-01'
 tags:
   - programming
   - opensource
-  - rubyonrails
+  - rails
 ---
 
 At [Coco](http://www.cocodesign.com), we are starting to build out some e-commerce sites. In order to expedite the process, we are using [Substruct](http://code.google.com/p/substruct) as a solution. While working with it, I have noticed a few things that needed to be fixed.

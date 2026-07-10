@@ -1,6 +1,8 @@
 ---
 title: "Text Editor Timeline"
 date: '2009-04-09'
+tags:
+  - programming
 ---
 
 I just realized after seeing a post about Redcar (a programmer’s editor for GNOME) that I am uninterested in finding new editors. This used to be something I was desperate to find because I could never get vim to work right for me. I remember trying all kinds of editors like scream, BlueFish, and Kate. All never really sunk in with me.

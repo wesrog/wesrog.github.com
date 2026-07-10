@@ -1,6 +1,9 @@
 ---
 title: State of My Computing
 date: '2009-02-08'
+tags:
+  - linux
+  - mac
 ---
 I love Linux and my new refurb (read cheap) Dell Inspiron 13. Picked it up for
 $424. Near equivalent in MacBook specs, but not as elegantly designed as a

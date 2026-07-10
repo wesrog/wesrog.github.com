@@ -3,7 +3,7 @@ title: New bike alert!
 date: '2008-05-08'
 tags:
   - photography
-  - bicycles
+  - bicycling
 ---
 A Bianchi Pista found on craigslist!
 

@@ -1,6 +1,9 @@
 ---
 title: "Looking towards downtown PDX: "
 date: '2010-07-25'
+tags:
+  - photography
+  - life
 ---
 
 ![](./tumblr_l64pjpp9te1qz70lno1_1280.jpg)

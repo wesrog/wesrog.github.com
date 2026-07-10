@@ -1,6 +1,8 @@
 ---
 title: Obscure OSX Audio Players
 date: '2011-03-09'
+tags:
+  - mac
 ---
 
 -   [http://cogx.org/development.php](http://cogx.org/development.php)

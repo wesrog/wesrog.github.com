@@ -3,7 +3,7 @@ title: OS X Terminal Fun with Fortune
 date: '2008-06-17'
 tags:
   - mac
-  - geek
+  - misc
 ---
 
 I have known about [Fortune](http://en.wikipedia.org/wiki/Fortune_(Unix)) for several years now, and I randomly thought about it today. I wondered, could I have fortune give me a fortune each time I open a new terminal window. After a little digging and worrying about it being complicated, I simply tried to just place the path of fortune into my .profile. Voila! Now, every time I open Terminal, I am greeted with a neat little fortune.

@@ -3,7 +3,6 @@ title: Pink Banana Smoothie
 date: '2009-07-19'
 tags:
   - food
-  - recipes
 ---
 
 This is the best smoothie I’ve ever made and it’s really easy, granted you have a blender on hand.

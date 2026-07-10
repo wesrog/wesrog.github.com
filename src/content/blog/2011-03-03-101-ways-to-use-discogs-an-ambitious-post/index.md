@@ -1,6 +1,8 @@
 ---
 title: 101 Ways to Use Discogs (An Ambitious Post)
 date: '2011-03-03'
+tags:
+  - music
 ---
 
 1.  Buy rare vinyl

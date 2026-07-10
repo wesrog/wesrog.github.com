@@ -2,7 +2,7 @@
 title: "Sluggo's:"
 date: '2010-01-11'
 tags:
-  - photos
+  - photography
 ---
 
 ![](./tumblr_kw27vi9GWn1qz70lno1_1280.jpg)

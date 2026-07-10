@@ -2,7 +2,6 @@
 title: Ditching teflon for good...
 date: '2006-02-16'
 tags:
-  - cooking
   - food
 ---
 

@@ -4,7 +4,7 @@ date: '2006-10-23'
 tags:
   - programming
   - webdev
-  - rubyonrails
+  - rails
 ---
 
 Hello. I have built an ACL (user-management) system with Rails and I need **you** to test it. Please download the zip, extract it, create your database and set it up, then run `rake db:migrate`.

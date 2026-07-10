@@ -1,6 +1,10 @@
 ---
 title: "Ruby: Modular Tags"
 date: '2008-09-11'
+tags:
+  - ruby
+  - refactoring
+  - opensource
 ---
 
 It’s hard to tell, but I’ve really grown a lot in terms of Ruby. I’ve spent most of tonight refactoring our radius tag system to be more modular. I’ve always wanted to be able to split up the tags into different files based on the tags. The CMS I have built utilizes polymorphism for resources. So, before, the tags file was huge… encompassing not only basic resource tags, but also articles, galleries, etc. Now, I can factor those out into their own files and it’s much more beautiful.

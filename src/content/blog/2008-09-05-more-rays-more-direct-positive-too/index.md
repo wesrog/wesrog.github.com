@@ -1,6 +1,8 @@
 ---
 title: "More Rays: More direct positive too."
 date: '2008-09-05'
+tags:
+  - photography
 ---
 
 ![](./aXuJeHmz7dhln9nuycSHx2jS_1280.jpg)

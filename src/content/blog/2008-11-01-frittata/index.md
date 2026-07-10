@@ -2,7 +2,7 @@
 title: Frittata
 date: '2008-11-01'
 tags:
-  - recipes
+  - food
 ---
 
 Frittata recipe, if you ever forget:

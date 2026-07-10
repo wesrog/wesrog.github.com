@@ -1,6 +1,8 @@
 ---
 title: "Fight the power! Don’t let the man brainwash you. So this guy felt the need to r"
 date: '2008-09-10'
+tags:
+  - misc
 ---
 
 ![](./aXuJeHmz7dpzjfxcZlHktI7w_400.jpg)

@@ -3,7 +3,7 @@ title: This fence has sensors...
 date: '2008-05-22'
 tags:
   - photography
-  - bicycles
+  - bicycling
 ---
 I was at the PNS airfield because it's a really lovely, quiet little back road
 to bike down. As I'm there, the sun is setting, planes are flying

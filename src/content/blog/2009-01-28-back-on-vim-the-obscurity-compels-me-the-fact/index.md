@@ -1,6 +1,8 @@
 ---
 title: "Back on vim… the obscurity compels me. The fact that vi has been around f"
 date: '2009-01-28'
+tags:
+  - programming
 ---
 
 ![](./aXuJeHmz7ja2hkqgxAk3lZdOo1_1280.png)

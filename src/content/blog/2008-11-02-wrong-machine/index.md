@@ -1,6 +1,8 @@
 ---
 title: "Wrong Machine"
 date: '2008-11-02'
+tags:
+  - programming
 ---
 
 ![](./aXuJeHmz7fsqopg9zB20uWVno1_1280.png)

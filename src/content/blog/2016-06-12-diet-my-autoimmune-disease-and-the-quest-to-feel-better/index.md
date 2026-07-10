@@ -2,9 +2,8 @@
 title: Diet, my autoimmune disease, and the quest to feel better
 date: '2016-06-12'
 tags:
-  - diet
-  - lifestyle
   - health
+  - life
 ---
 
 It all started with my rheumatoid arthritis diagnosis back in 2012. Maybe like most people diagnosed with an autoimmune disease, I didn’t believe it would ever happen to me. I also thought about its effects and how severe they can be. Would it slowly deform me? Would it mean that I would have trouble doing simple things like walking, picking things up, and opening jars? These questions raced through my head after my doctor notified me.

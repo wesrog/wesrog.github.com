@@ -4,7 +4,7 @@ date: '2006-03-03'
 tags:
   - programming
   - webdev
-  - rubyonrails
+  - rails
 ---
 
 Wow.

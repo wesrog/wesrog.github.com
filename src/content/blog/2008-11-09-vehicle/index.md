@@ -3,7 +3,7 @@ title: "Vehicle, first pass"
 date: "2008-11-09"
 tags:
   - music
-  - audio
+  - music-composition
 ---
 
 Vehicle, the first song recorded with FourTrack (iPhone app). Post-processing

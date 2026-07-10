@@ -2,7 +2,7 @@
 title: "Calm Water:"
 date: '2009-11-11'
 tags:
-  - photos
+  - photography
 ---
 
 ![](./tumblr_ksyii3RrfK1qz70lno1_1280.jpg)

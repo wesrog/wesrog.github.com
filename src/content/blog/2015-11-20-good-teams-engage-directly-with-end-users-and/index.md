@@ -1,6 +1,8 @@
 ---
 title: Good teams engage directly with end-users and customers ever
 date: '2015-11-20'
+tags:
+  - management
 ---
 
 > Good teams engage directly with end-users and customers every week, to better understand their customers, and to see the customer’s response to their latest ideas. Bad teams think they are the customer.

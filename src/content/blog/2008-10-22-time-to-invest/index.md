@@ -1,6 +1,8 @@
 ---
 title: Time to Invest
 date: '2008-10-22'
+tags:
+  - life
 ---
 
 I finally setup a brokerage account. I’m 27, and it seems like this is as good of a time than any to go ahead and invest in the market. Lately, I’ve been able to put more money away in my bank savings account. I noticed that it was hardly appreciating any, and figured that I could be doing more to facilitate growth.

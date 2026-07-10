@@ -1,6 +1,9 @@
 ---
 title: ""
 date: '2008-09-08'
+tags:
+  - life
+  - travel
 ---
 
 Spent today at my parents house washing clothes and hanging out. When I arrived, Savannah was in a bad mood because she had a loose tooth. My mom and I spent several hours trying to get her to pull it out, but she was incapable due to fear of pain. We can all empathize… even with a loose tooth, it still hurts to yank it out. She wanted mom to help, but when it came down to it, she wouldn’t let anyone try to pull it. It was pretty frustrating, and I ended up getting a headache.

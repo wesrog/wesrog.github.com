@@ -2,7 +2,7 @@
 title: If you walk into a meeting and it isn’t clear who the owner 
 date: '2015-11-30'
 tags:
-  - radicalcandor
+  - management
 ---
 
 > If you walk into a meeting and it isn’t clear who the owner is, feel free to leave and go do something more valuable for the company.

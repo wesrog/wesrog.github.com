@@ -1,6 +1,11 @@
 ---
 title: Everyday
 date: '2008-08-31'
+tags:
+  - life
+  - travel
+  - books
+  - photography
 ---
 
 This Labor Day weekend was spent at my Nanny’s. My mom and I took a trip up to Hawkinsville, GA to see her because of her worsening health. Her memory is fading and she barely has an appetite. It’s very sad to see her in this state. She does remember me and most people, but doesn’t remember much after things happen. She has to take so much medicine!

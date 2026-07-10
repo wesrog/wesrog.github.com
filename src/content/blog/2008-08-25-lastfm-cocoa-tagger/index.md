@@ -1,6 +1,8 @@
 ---
 title: last.fm cocoa tagger
 date: '2008-08-25'
+tags:
+  - lastfm
 ---
 
 [last.fm cocoa tagger](http://633k.net/labels/lastfmtagger.html)

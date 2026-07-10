@@ -1,6 +1,8 @@
 ---
 title: This Blog Has Been Deprecated
 date: '2008-09-21'
+tags:
+  - blogging
 ---
 
 [This Blog Has Been Deprecated](http://www.633k.net/2008/09/this-blog-has-been-deprecated.html)

@@ -2,9 +2,8 @@
 title: What I Ate Today
 date: "2006-02-13"
 tags:
-  - diet
-  - food
   - health
+  - food
   - life
 ---
 

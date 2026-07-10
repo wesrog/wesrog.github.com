@@ -1,6 +1,8 @@
 ---
 title: ""
 date: '2008-10-02'
+tags:
+  - rails
 ---
 
 \# mass rename \*.html.erb files to \*.html.haml and remove the old \*.html.erb file  

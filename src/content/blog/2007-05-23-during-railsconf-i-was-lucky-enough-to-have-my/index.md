@@ -2,7 +2,6 @@
 title: During RailsConf, I was lucky enough to have my camera ready to take pics and mo
 date: '2007-05-23'
 tags:
-  - railsconf
   - conferences
 ---
 

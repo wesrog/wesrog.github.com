@@ -1,6 +1,9 @@
 ---
 title: Who is Ezra Caldwell?
 date: '2017-10-19'
+tags:
+  - bicycling
+  - photography
 ---
 
 If you aren't familiar with Ezra Caldwell, he is most recently known

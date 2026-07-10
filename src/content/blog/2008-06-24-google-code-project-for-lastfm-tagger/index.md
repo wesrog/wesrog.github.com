@@ -3,7 +3,6 @@ title: Google Code Project for Last.fm Tagger
 date: '2008-06-24'
 tags:
   - lastfm
-  - lastfmtagger
   - mac
   - programming
   - ruby

@@ -1,6 +1,8 @@
 ---
 title: "2001 Cab: Mom and I having fun setting up a pic to send in to the Jarvis winery."
 date: '2008-08-12'
+tags:
+  - photography
 ---
 
 ![](./aXuJeHmz7cjln0kuyBfnWRJl_1280.jpg)

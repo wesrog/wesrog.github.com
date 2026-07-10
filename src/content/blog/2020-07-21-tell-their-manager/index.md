@@ -1,6 +1,8 @@
 ---
 title: 'When you notice a teammate doing well, tell their manager'
 date: '2020-07-21'
+tags:
+  - management
 ---
 
 Inspired by a post I saw linked on pinboard, I wanted to share my story about why it's important in larger organizations where you're working with several interdependent teams that you recognize good work.

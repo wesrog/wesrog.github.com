@@ -1,6 +1,9 @@
 ---
 title: ""
 date: '2008-09-29'
+tags:
+  - gaming
+  - movies
 ---
 
 Addictions are as follows:  

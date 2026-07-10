@@ -3,7 +3,6 @@ title: Last.fm Tagger 0.9
 date: '2008-02-28'
 tags:
   - lastfm
-  - lastfmtagger
   - music
   - programming
   - ruby

@@ -1,6 +1,8 @@
 ---
 title: "My bliss: "
 date: '2011-05-20'
+tags:
+  - music
 ---
 
 ![](./tumblr_llhvqenQ3Q1qz70lno1_1280.png)

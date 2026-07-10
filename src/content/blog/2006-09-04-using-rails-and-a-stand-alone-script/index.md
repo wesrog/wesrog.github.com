@@ -3,7 +3,7 @@ title: Using Rails and a stand-alone script
 date: "2006-09-04"
 tags:
   - programming
-  - rubyonrails
+  - rails
   - webdev
 ---
 

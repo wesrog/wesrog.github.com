@@ -1,6 +1,8 @@
 ---
 title: "Ice Cream Sandwiches for Dogs"
 date: '2008-09-12'
+tags:
+  - misc
 ---
 
 ![](./aXuJeHmz7drrr7iuRXqI68m9_250.jpg)

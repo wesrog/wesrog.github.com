@@ -1,6 +1,8 @@
 ---
 title: "Tammy: Tammy outside the Coco offices for a quick photoshoot. Jay was talking to"
 date: '2008-08-26'
+tags:
+  - photography
 ---
 
 ![](./aXuJeHmz7d4aetgih4fBxJBY_1280.jpg)

@@ -1,6 +1,9 @@
 ---
 title: My Top 5 Artists (Week Ending 2009-8-30)
 date: '2009-08-31'
+tags:
+  - music
+  - lastfm
 ---
 
 [My Top 5 Artists (Week Ending 2009-8-30)](http://www.last.fm/user/wesr/charts?charttype=weekly&date_to=1251633600)

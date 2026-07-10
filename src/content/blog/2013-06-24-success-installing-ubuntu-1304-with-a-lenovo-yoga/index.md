@@ -3,7 +3,7 @@ title: Success Installing Ubuntu 13.04 with a Lenovo Yoga 11s
 date: '2013-06-24'
 tags:
   - linux
-  - ubuntu lenovo
+  - gadgets
 ---
 I spent an entire weekend installing Linux on my Lenovo Yoga 11s. I
 could’ve halved that time if I had just bit the bullet and installed Ubuntu.

@@ -2,7 +2,7 @@
 title: Michael Scott Quote Mac OS X Widget
 date: '2009-05-02'
 tags:
-  - ms-widget
+  - gadgets
 ---
 
 ![](http://dl.getdropbox.com/u/61338/ms-widget-screenshot.png)

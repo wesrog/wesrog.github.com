@@ -3,7 +3,6 @@ title: New Last.fm Tagger for RubyOSA
 date: '2007-03-19'
 tags:
   - lastfm
-  - lastfmtagger
   - mac
   - programming
   - ruby

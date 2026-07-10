@@ -3,7 +3,6 @@ title: "We Made it to 1.0!"
 date: '2008-03-11'
 tags:
   - lastfm
-  - lastfmtagger
   - programming
   - ruby
   - mac

@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+const counts = new Map<string, number>();
+for (const post of posts) {
+  for (const tag of post.data.tags) {
+    counts.set(tag, (counts.get(tag) ?? 0) + 1);
+  }
+}
+
+const tags = [...counts.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+const maxCount = Math.max(...counts.values());
+const scale = (count: number) => (0.85 + (count / maxCount) * 0.9).toFixed(2);
+---
+<BaseLayout title="Tags">
+  <div class="wrapper">
+    <h1>Tags</h1>
+    <ul class="tag-cloud">
+      {tags.map(([tag, count]) => (
+        <li>
+          <a href={`/tags/${tag}/`} class="post-tag" style={`font-size: ${scale(count)}em`}>{tag}</a>
+          <span class="tag-count">{count}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+h1 { margin-bottom: var(--spacing); }
+.tag-cloud {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25em 1em;
+}
+.tag-cloud li { display: inline-flex; align-items: baseline; gap: 0.3em; }
+.post-tag { margin-right: 0; }
+.tag-count { color: var(--color-muted); font-size: 0.75em; }
+</style>

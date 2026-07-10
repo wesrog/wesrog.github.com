@@ -1,6 +1,8 @@
 ---
 title: "Lily Watchin' TV"
 date: '2008-10-29'
+tags:
+  - photography
 ---
 
 ![](./aXuJeHmz7fmvz2380zO5yTrRo1_1280.jpg)

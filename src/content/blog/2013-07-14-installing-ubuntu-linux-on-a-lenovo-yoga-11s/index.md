@@ -1,6 +1,8 @@
 ---
 title: Installing Ubuntu Linux on a Lenovo Yoga 11s
 date: '2013-07-15'
+tags:
+  - linux
 ---
 If you’re looking for a Linux laptop, I’d highly recommend the Lenovo Yoga 11s.
 

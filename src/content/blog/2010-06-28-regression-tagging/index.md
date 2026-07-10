@@ -3,11 +3,9 @@ title: Regression Tagging
 date: '2010-06-28'
 tags:
   - music
-  - organization
-  - tagging
-  - folksonomy
-  - nerd
-  - time-vampire
+  - life
+  - lastfm
+  - misc
 ---
 I know you run your new albums through Picard, but have you done “regression
 tagging”? I’ve been spending a little time retagging my massive

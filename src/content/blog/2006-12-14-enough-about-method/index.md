@@ -1,6 +1,8 @@
 ---
 title: Enough About Method
 date: '2006-12-14'
+tags:
+  - life
 ---
 
 I am continually fascinated by what Terence McKenna expressed. Ever since I somehow got pulled into investigating the mysteries of the stars and planets, I’ve been reading and listening to the thoughts of the great thinkers out there.

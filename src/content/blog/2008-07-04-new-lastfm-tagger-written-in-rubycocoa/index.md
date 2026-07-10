@@ -3,12 +3,10 @@ title: New Last.fm Tagger Written in RubyCocoa
 date: '2008-07-04'
 tags:
   - lastfm
-  - lastfmtagger
   - mac
   - programming
   - ruby
   - software
-  - rubycocoa
 ---
 
 So, I’m trying my hand at Cocoa, namely RubyCocoa. Objective-C is a bit out of my grasp right now. If I start needing big performance boosts, I’ll go that route. In the meantime, writing RubyCocoa apps is insanely fun. I wrote this basic tagger in 2 days (roughly 6 hours) and it works pretty well!

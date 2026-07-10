@@ -7,22 +7,47 @@ const postSlug = (id: string) => id.replace(/\/index$/, '');
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
   const tags = [...new Set(posts.flatMap(p => p.data.tags))];
+
+  const coOccur = new Map<string, Map<string, number>>();
+  for (const post of posts) {
+    for (const t of post.data.tags) {
+      if (!coOccur.has(t)) coOccur.set(t, new Map());
+      for (const o of post.data.tags) {
+        if (o === t) continue;
+        const m = coOccur.get(t)!;
+        m.set(o, (m.get(o) ?? 0) + 1);
+      }
+    }
+  }
+
   return tags.map(tag => ({
     params: { tag },
     props: {
       posts: posts
         .filter(p => p.data.tags.includes(tag))
         .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+      related: [...(coOccur.get(tag) ?? new Map())]
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 8)
+        .map(([relatedTag]) => relatedTag),
     },
   }));
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const { posts, related } = Astro.props;
 ---
 <BaseLayout title={`#${tag}`}>
   <div class="wrapper">
     <h1>#{tag}</h1>
+    {related.length > 0 && (
+      <p class="related-tags">
+        Related:
+        {related.map(relatedTag => (
+          <a href={`/tags/${relatedTag}/`} class="post-tag">{relatedTag}</a>
+        ))}
+      </p>
+    )}
     <ul class="post-list">
       {posts.map(post => (
         <li>
@@ -37,7 +62,9 @@ const { posts } = Astro.props;
 </BaseLayout>
 
 <style>
-h1 { margin-bottom: var(--spacing); }
+h1 { margin-bottom: 0.5em; }
+.related-tags { color: var(--color-muted); font-size: 0.9em; margin: 0 0 var(--spacing); }
+.related-tags .post-tag { margin-left: 0.5em; }
 .post-list { list-style: none; padding: 0; }
 .post-list li { margin-bottom: 1em; }
 time { display: block; }

@@ -1,6 +1,9 @@
 ---
 title: "Three Computers in One"
 date: '2008-10-11'
+tags:
+  - photography
+  - gadgets
 ---
 
 ![](./aXuJeHmz7eyezvipSuxhmj62o1_640.png)

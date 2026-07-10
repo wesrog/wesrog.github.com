@@ -5,7 +5,6 @@ tags:
   - programming
   - ruby
   - lastfm
-  - lastfmtagger
 ---
 
 I’ve always hated genre’s. They always place a constriction on the acceptance of an artist. However, they do come in handy in certain situations. For instance, I like to tag all my ambient stuff so that I may quickly choose an artist to fall asleep to. Now, I’m on a tagging rampage, however there are some artists where I have no idea how to “genrealize” it. Ah, but the ever-growing community on Last.fm tags artists! Most of the time, the genre is agreeable upon a majority and therefore acceptable to me. I was growing sick of searching Last.fm for each artist, then choosing the most popular tag and tagging it in iTunes. If it weren’t for RubyOSA, I could not have accomplished what I wanted to do.

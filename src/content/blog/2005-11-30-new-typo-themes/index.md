@@ -3,7 +3,6 @@ title: "New Typo Themes!"
 date: '2005-11-30'
 tags:
   - blogging
-  - blogs
   - software
 ---
 

@@ -1,6 +1,9 @@
 ---
 title: "Hair Riddance!"
 date: '2008-10-15'
+tags:
+  - life
+  - movies
 ---
 
 Brooke cut my hair again on Monday. It feels so much better not having all that hair to deal with.

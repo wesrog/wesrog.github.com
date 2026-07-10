@@ -19,7 +19,7 @@ const rendered = await Promise.all(page.data.map(async post => {
 ---
 <BaseLayout title="WR">
   <div class="wrapper">
-    <p class="intro">Listen to <a href="/tags/music/">music</a>, look at <a href="/tags/photography/">photography</a>, <a href="/tags/bicycles/">bicycles</a>, or read ramblings below.</p>
+    <p class="intro">Listen to <a href="/tags/music-composition/">music</a>, look at <a href="/tags/photography/">photography</a>, <a href="/tags/bicycling/">bicycling</a>, or read ramblings below.</p>
     <ul class="post-list">
       {rendered.map(({ post, Content }) => (
         <li>

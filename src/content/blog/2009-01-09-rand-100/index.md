@@ -2,7 +2,7 @@
 title: rand 100
 date: '2009-01-10'
 tags:
-  - geek
+  - misc
   - life
 ---
 So, you’re chatting with a friend over IM or email and you’ve decided that

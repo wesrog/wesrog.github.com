@@ -2,7 +2,7 @@
 title: Warren Ellis saw me
 date: '2006-04-10'
 tags:
-  - blogs
+  - blogging
   - comics
 ---
 

@@ -1,6 +1,10 @@
 ---
 title: Forking `textile_editor_helper`
 date: "2008-11-29"
+tags:
+  - rails
+  - ruby
+  - opensource
 ---
 
 I forked the textile_editor_helper plugin so that it will work with Rails

@@ -2,7 +2,6 @@
 title: "…think of myself as a teacher primarily or at oral, I"
 date: '2006-12-14'
 tags:
-  - reading
   - books
 ---
 

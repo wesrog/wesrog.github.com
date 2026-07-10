@@ -1,6 +1,9 @@
 ---
 title: coversrc.com (Cover Source)
 date: '2009-10-18'
+tags:
+  - ruby
+  - webdev
 ---
 
 ![](http://coversrc.com/cs-icon.png)

@@ -2,7 +2,7 @@
 title: Good Bikes
 date: '2020-06-01'
 tags:
-  - bicycles
+  - bicycling
 ---
 
 After a good run, we let some bikes go to other homes.

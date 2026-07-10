@@ -1,6 +1,9 @@
 ---
 title: Organizing with Groupings in iTunes
 date: '2009-11-12'
+tags:
+  - music
+  - ruby
 ---
 I’ve been trying to use groupings in iTunes lately to help narrow down finding
 what I want to hear. [coversrc.com](http://coversrc.com) has helped

@@ -3,7 +3,7 @@ title: "Bush to criminalize? No way!"
 date: '2006-01-23'
 tags:
   - politics
-  - rant
+  - misc
 ---
 
 [Bush to criminalize protesters under Patriot Act as ‘disruptors’](http://www.sianews.com/modules.php?name=News&file=article&sid=2808)

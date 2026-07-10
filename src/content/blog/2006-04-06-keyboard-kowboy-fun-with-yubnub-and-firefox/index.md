@@ -3,7 +3,7 @@ title: "Keyboard Kowboy: Fun with YubNub and Firefox"
 date: '2006-04-06'
 tags:
   - firefox
-  - hacks
+  - misc
 ---
 
 I’m in the process of almost exclusively using my keyboard for my daily tasks. I want to eventually get to a point where most everything I want to do can be accomplished with a keyboard. This works well because I am a programmer. This article will continually be updated as I find more stuff.

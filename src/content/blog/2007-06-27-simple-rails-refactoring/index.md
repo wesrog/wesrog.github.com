@@ -4,7 +4,7 @@ date: '2007-06-27'
 tags:
   - programming
   - webdev
-  - rubyonrails
+  - rails
   - refactoring
 ---
 

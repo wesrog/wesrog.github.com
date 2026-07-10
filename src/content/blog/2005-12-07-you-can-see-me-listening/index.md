@@ -4,7 +4,6 @@ date: '2005-12-07'
 tags:
   - music
   - lastfm
-  - socialnetworking
 ---
 
 Hey. Look at the slick new chart to the left. Thanks [Last.fm](http://www.last.fm/onyoursite/banners.php)!

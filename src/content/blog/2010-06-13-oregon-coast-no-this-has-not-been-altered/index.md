@@ -1,6 +1,9 @@
 ---
 title: "Oregon Coast: "
 date: '2010-06-13'
+tags:
+  - photography
+  - travel
 ---
 
 ![](./tumblr_l3y5wi4d5e1qz70lno1_1280.jpg)

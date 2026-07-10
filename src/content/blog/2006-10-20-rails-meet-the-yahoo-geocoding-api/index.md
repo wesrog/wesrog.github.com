@@ -2,7 +2,7 @@
 title: "Rails, meet the Yahoo! Geocoding API"
 date: '2006-10-20'
 tags:
-  - rubyonrails
+  - rails
   - programming
   - webdev
 ---

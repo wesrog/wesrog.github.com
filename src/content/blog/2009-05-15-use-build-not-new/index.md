@@ -1,6 +1,8 @@
 ---
 title: 'Use "build", Not "new"'
 date: "2009-05-15"
+tags:
+  - rails
 ---
 
 When working with multiple models and forms in Rails, your associations need to

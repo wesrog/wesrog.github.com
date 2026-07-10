@@ -1,6 +1,8 @@
 ---
 title: "Prepping for the Beach Ride: "
 date: '2010-01-16'
+tags:
+  - bicycling
 ---
 
 ![](./tumblr_kwd0yyldrP1qz70lno1_1280.jpg)

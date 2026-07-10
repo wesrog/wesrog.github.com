@@ -2,7 +2,6 @@
 title: Portland Bridge Pedal 2019
 date: '2019-08-11'
 tags:
-  - bicycles
   - bicycling
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: "Discovering Rapoon"
 date: '2008-11-20'
+tags:
+  - music
 ---
 
 I was unaware that zoviet france ceased creation of music. Rapoon is his new alias and I’m hooked. Dark ambient similar to Robert Rich, Biosphere (Geir Jennsen) and Steve Roach. It’s delectable. Perfect background music with a feeling that leaves you isolated and cold on a desolate plain.

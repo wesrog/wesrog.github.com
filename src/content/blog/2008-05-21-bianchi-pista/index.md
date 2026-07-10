@@ -3,7 +3,7 @@ title: Bianchi Pista
 date: '2008-05-22'
 tags:
   - photography
-  - bicycles
+  - bicycling
 ---
 
 Better picture of the Pista.

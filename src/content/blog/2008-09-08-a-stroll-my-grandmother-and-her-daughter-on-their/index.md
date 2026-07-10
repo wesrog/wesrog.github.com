@@ -1,6 +1,8 @@
 ---
 title: "A Stroll: My grandmother and her daughter on their way to Betty's."
 date: '2008-09-08'
+tags:
+  - photography
 ---
 
 ![](./aXuJeHmz7dm4klm45pUes1kQ_1280.jpg)
