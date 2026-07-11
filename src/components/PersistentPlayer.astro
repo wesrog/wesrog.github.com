@@ -9,6 +9,7 @@
 <style>
 #persistent-player {
   display: flex;
+  flex-wrap: wrap;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -21,8 +22,8 @@
   border-top: 1px solid var(--color-border);
 }
 .pp-status {
-  flex-shrink: 1;
-  min-width: 0;
+  flex: 0 0 auto;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -52,15 +53,6 @@
   line-height: 1;
   padding: 0.25em;
   flex-shrink: 0;
-}
-@media (max-width: 600px) {
-  #persistent-player {
-    flex-wrap: wrap;
-  }
-  .pp-status {
-    flex-basis: 100%;
-    white-space: normal;
-  }
 }
 </style>
 
