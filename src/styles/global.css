@@ -36,6 +36,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 a { color: var(--color-link); }
@@ -50,6 +51,8 @@ a:visited { color: var(--color-link-visited); }
 h1, h2, h3 { line-height: 1.2; }
 
 img { max-width: 100%; height: auto; display: block; }
+
+iframe, embed, object { max-width: 100%; }
 
 audio { width: 100%; }
 
