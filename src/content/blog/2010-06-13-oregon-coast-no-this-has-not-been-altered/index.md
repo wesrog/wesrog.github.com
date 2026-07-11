@@ -1,5 +1,5 @@
 ---
-title: "Oregon Coast: "
+title: "Oregon Coast:"
 date: '2010-06-13'
 tags:
   - photography

@@ -1,5 +1,5 @@
 ---
-title: "Cooper: "
+title: "Cooper:"
 date: '2009-08-17'
 tags:
   - photography

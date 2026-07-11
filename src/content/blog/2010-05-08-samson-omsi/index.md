@@ -1,5 +1,5 @@
 ---
-title: "Samson: "
+title: "Samson:"
 date: '2010-05-08'
 ---
 

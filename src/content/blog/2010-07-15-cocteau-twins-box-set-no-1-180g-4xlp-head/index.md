@@ -1,5 +1,5 @@
 ---
-title: "Cocteau Twins - Box Set No. 1 180g 4xLP: "
+title: "Cocteau Twins - Box Set No. 1 180g 4xLP:"
 date: '2010-07-15'
 tags:
   - music

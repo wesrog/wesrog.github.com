@@ -1,9 +1,10 @@
 ---
-title: ""
+title: "Addictions are as follows:"
 date: '2008-09-29'
 tags:
   - gaming
   - movies
+  - status
 ---
 
 Addictions are as follows:  

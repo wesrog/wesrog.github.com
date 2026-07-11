@@ -1,5 +1,5 @@
 ---
-title: "King Pup: "
+title: "King Pup:"
 date: '2009-10-21'
 ---
 

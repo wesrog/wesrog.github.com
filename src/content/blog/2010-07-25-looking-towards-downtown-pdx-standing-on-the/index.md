@@ -1,5 +1,5 @@
 ---
-title: "Looking towards downtown PDX: "
+title: "Looking towards downtown PDX:"
 date: '2010-07-25'
 tags:
   - photography

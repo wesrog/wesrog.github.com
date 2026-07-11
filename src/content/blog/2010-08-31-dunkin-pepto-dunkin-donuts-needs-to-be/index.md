@@ -1,5 +1,5 @@
 ---
-title: "Dunkin' Pepto?: "
+title: "Dunkin' Pepto?:"
 date: '2010-08-31'
 tags:
   - photography

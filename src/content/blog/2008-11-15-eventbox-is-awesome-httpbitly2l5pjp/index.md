@@ -1,6 +1,8 @@
 ---
-title: ""
+title: "EventBox is awesome! http://bit.ly/2l5pjP Facebook,…"
 date: '2008-11-15'
+tags:
+  - status
 ---
 
 EventBox is awesome! [http://bit.ly/2l5pjP](http://bit.ly/2l5pjP) Facebook, Flickr, Twitter, etc all in one with growl notifications :D

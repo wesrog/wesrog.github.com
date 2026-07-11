@@ -1,5 +1,5 @@
 ---
-title: "Jalapeño Plant: "
+title: "Jalapeño Plant:"
 date: '2009-09-21'
 ---
 

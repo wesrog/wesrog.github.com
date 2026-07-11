@@ -1,6 +1,8 @@
 ---
-title: ""
+title: "My parents opened a new restaurant in Pace. Today, I’m going by to check it out…"
 date: '2008-09-21'
+tags:
+  - status
 ---
 
 My parents opened a new restaurant in Pace. Today, I’m going by to check it out and take some pics to put up on the website. Speaking of the website, I hope to use my new CMS service to host it. It will be a nice test to see how well it works. Gotta jump in the shower and get my dirty clothes together to wash at my parents house.

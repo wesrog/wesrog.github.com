@@ -1,5 +1,5 @@
 ---
-title: "My bliss: "
+title: "My bliss:"
 date: '2011-05-20'
 tags:
   - music

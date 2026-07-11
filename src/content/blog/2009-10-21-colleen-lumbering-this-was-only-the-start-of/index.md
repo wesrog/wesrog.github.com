@@ -1,5 +1,5 @@
 ---
-title: "Colleen Lumbering: "
+title: "Colleen Lumbering:"
 date: '2009-10-21'
 ---
 

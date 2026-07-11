@@ -1,8 +1,9 @@
 ---
-title: ""
+title: "If only I would have pryed a little deeper into tumblog, I would have converted…"
 date: '2008-09-06'
 tags:
   - blogging
+  - status
 ---
 
 If only I would have pryed a little deeper into tumblog, I would have converted from Blogger a long time ago. They allow private posts (duh!) and tags (duh!) So, there was nothing holding me back. Just finished importing all my posts from Blogger. There are a lot of stale links, broken images that I need to fix.

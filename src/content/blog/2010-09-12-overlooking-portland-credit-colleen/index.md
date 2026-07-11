@@ -1,5 +1,5 @@
 ---
-title: "Overlooking Portland: "
+title: "Overlooking Portland:"
 date: '2010-09-12'
 ---
 

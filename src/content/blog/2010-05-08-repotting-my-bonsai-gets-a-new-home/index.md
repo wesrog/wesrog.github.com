@@ -1,5 +1,5 @@
 ---
-title: "Repotting: "
+title: "Repotting:"
 date: '2010-05-08'
 ---
 

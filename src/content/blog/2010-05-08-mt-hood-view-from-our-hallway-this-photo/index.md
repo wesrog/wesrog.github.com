@@ -1,5 +1,5 @@
 ---
-title: "Mt. Hood: "
+title: "Mt. Hood:"
 date: '2010-05-08'
 ---
 

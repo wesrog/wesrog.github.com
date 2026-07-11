@@ -1,5 +1,5 @@
 ---
-title: "Prepping for the Beach Ride: "
+title: "Prepping for the Beach Ride:"
 date: '2010-01-16'
 tags:
   - bicycling

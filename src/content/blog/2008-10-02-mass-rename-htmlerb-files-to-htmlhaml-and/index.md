@@ -1,8 +1,9 @@
 ---
-title: ""
+title: "# mass rename .html.erb files to .html.haml and remove the old *.html.erb…"
 date: '2008-10-02'
 tags:
   - rails
+  - status
 ---
 
 \# mass rename \*.html.erb files to \*.html.haml and remove the old \*.html.erb file  

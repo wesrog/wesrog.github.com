@@ -1,6 +1,8 @@
 ---
-title: ""
+title: "Just picked up a 24oz tall boy. The nap I took earlier today is keeping me up."
 date: '2008-09-21'
+tags:
+  - status
 ---
 
 Just picked up a 24oz tall boy. The nap I took earlier today is keeping me up.

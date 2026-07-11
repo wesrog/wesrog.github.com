@@ -1,5 +1,5 @@
 ---
-title: "M.C. Escher Concave and Convex Puzzle: "
+title: "M.C. Escher Concave and Convex Puzzle:"
 date: '2009-09-21'
 ---
 

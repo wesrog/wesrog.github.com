@@ -1,5 +1,5 @@
 ---
-title: "Carlsbad Caverns: "
+title: "Carlsbad Caverns:"
 date: '2010-02-04'
 tags:
   - travel

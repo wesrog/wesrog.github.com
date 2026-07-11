@@ -1,5 +1,5 @@
 ---
-title: "King Salmon w/Maitake Fiddlehead Sauté: "
+title: "King Salmon w/Maitake Fiddlehead Sauté:"
 date: '2010-06-13'
 tags:
   - food

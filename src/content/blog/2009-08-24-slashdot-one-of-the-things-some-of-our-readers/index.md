@@ -1,5 +1,5 @@
 ---
-title: "Slashdot: One of the things some of our readers really want "
+title: "Slashdot: One of the things some of our readers really want"
 date: '2009-08-24'
 ---
 

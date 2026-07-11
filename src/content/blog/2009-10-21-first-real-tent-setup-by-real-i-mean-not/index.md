@@ -1,5 +1,5 @@
 ---
-title: "First (real) tent setup: "
+title: "First (real) tent setup:"
 date: '2009-10-21'
 ---
 
