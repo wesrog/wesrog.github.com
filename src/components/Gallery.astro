@@ -40,7 +40,9 @@ const uid = Math.random().toString(36).slice(2, 8);
 </dialog>
 
 <script>
-  document.querySelectorAll<HTMLElement>('.gallery').forEach(gallery => {
+function setupGalleries() {
+  document.querySelectorAll<HTMLElement>('.gallery:not([data-wired])').forEach(gallery => {
+    gallery.dataset.wired = 'true';
     const uid = gallery.dataset.uid!;
     const dialog = document.getElementById(`lb-${uid}`) as HTMLDialogElement;
     const lbImg = dialog.querySelector('img') as HTMLImageElement;
@@ -75,6 +77,9 @@ const uid = Math.random().toString(36).slice(2, 8);
       if (e.key === 'Escape') dialog.close();
     });
   });
+}
+
+document.addEventListener('astro:page-load', setupGalleries);
 </script>
 
 <style>
