@@ -1,7 +1,12 @@
 ---
 ---
 <div id="persistent-player" transition:persist style="display: none">
-  <span class="pp-status">playing <span class="pp-filename"></span> from <a class="pp-title" href="#"></a></span>
+  <span class="pp-status">
+    <span>playing</span>
+    <span class="pp-filename"></span>
+    <span>from</span>
+    <a class="pp-title" href="#"></a>
+  </span>
   <audio controls></audio>
   <button class="pp-close" aria-label="Close player">✕</button>
 </div>
@@ -22,13 +27,21 @@
   border-top: 1px solid var(--color-border);
 }
 .pp-status {
-  flex: 0 0 auto;
-  max-width: 100%;
+  display: flex;
+  align-items: baseline;
+  gap: 0.3em;
+  min-width: 0;
+  font-size: 0.875em;
+  color: var(--color-muted);
+}
+.pp-filename,
+.pp-title {
+  display: inline-block;
+  max-width: 140px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 0.875em;
-  color: var(--color-muted);
+  vertical-align: bottom;
 }
 .pp-filename {
   color: var(--color-text);
@@ -89,7 +102,9 @@ document.addEventListener('astro:page-load', () => {
     if (audio.src === resolvedSrc && !audio.paused) return;
     audio.src = src;
     filenameEl.textContent = filename;
+    filenameEl.title = filename;
     titleEl.textContent = title;
+    titleEl.title = title;
     titleEl.href = url;
     showBar();
     audio.play().catch(() => {});
