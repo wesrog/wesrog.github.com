@@ -55,6 +55,7 @@ import img44 from './2010-02-03-369519063-1.jpg';
 import img45 from './2010-02-03-369525066-1.jpg';
 import img46 from './2010-02-03-this-is-the-closest-we-came-to-a-ufo-in-roswell-1.jpg';
 import img47 from './2010-02-03-370051471-1.jpg';
+import carlsbadCavernsGreatDome from './carlsbad-caverns-great-dome.jpg';
 import img48 from './2010-02-03-at-carlsbad-caverns-1.jpg';
 import img49 from './2010-02-03-slightly-out-of-focus-1.jpg';
 import img50 from './2010-02-03-this-place-is-magical-go-see-it-1.jpg';
@@ -193,6 +194,10 @@ import img182 from './2010-02-19-we-3-powells-1.jpg';
 import img183 from './2010-02-20-looking-out-from-our-hallway-window-1.jpg';
 import img184 from './2010-02-20-our-apartment-building-established-1904-1.jpg';
 import img185 from './2010-02-21-haystack-rock-in-cannon-beach-or-80mi-outside-of-1.jpg';
+import cannonBeachPhotoBuffs from './cannon-beach-photo-buffs.jpg';
+import cannonBeach from './cannon-beach.jpg';
+import cannonBeachSunset from './cannon-beach-sunset.jpg';
+import haystackRock from './haystack-rock.jpg';
 
 <Travelogue>
   <Day date="2010-01-31">
@@ -205,6 +210,7 @@ import img185 from './2010-02-21-haystack-rock-in-cannon-beach-or-80mi-outside-o
     <Entry time="20:22" images={[img7]}></Entry>
   </Day>
   <Day date="2010-02-01">
+    <Entry time="05:00">Just now leaving Pensacola</Entry>
     <Entry time="05:05">
       Got up at 4:40 this morning. Took showers, gathered belongings, ate breakfast and said goodbye to Pensacola. Here’s hoping the movers will pick up our stuff and transport it without destroying it! We still don’t know an eta on their arrival in Portland, but we’re sure to be entertained with hours on hold on the road. Now outside of Mobile, just in time for rush hour :)
     </Entry>
@@ -373,6 +379,7 @@ import img185 from './2010-02-21-haystack-rock-in-cannon-beach-or-80mi-outside-o
     <Entry time="22:56" images={[img50]}>
       This place is magical. Go see it.
     </Entry>
+    <Entry time="22:57" images={[carlsbadCavernsGreatDome]}>**Carlsbad Caverns:** I think this was part of the Great Dome. So magical.</Entry>
     <Entry time="22:58" images={[img51]}></Entry>
     <Entry time="22:59" images={[img52]}></Entry>
     <Entry time="22:59" images={[img53]}></Entry>
@@ -619,6 +626,7 @@ import img185 from './2010-02-21-haystack-rock-in-cannon-beach-or-80mi-outside-o
       Made it safely out of San Fransisco. Now heading to Redding.
     </Entry>
     <Entry time="16:30" images={[img162]}></Entry>
+    <Entry time="17:00">Made it to SFO. We’re hangin at Mr. Larner’s.</Entry>
     <Entry time="18:30">
       Just saw our first road sign to Portland right outside Redding, CA.
     </Entry>
@@ -698,8 +706,11 @@ import img185 from './2010-02-21-haystack-rock-in-cannon-beach-or-80mi-outside-o
     </Entry>
   </Day>
   <Day date="2010-02-21">
-    <Entry time="22:38" images={[img185]}>
-      Haystack Rock in Cannon Beach, OR. 80mi outside of Portland.
-    </Entry>
+    <Entry time="22:38" images={[
+      { src: cannonBeachPhotoBuffs, caption: 'Photo buffs at Cannon Beach' },
+      { src: cannonBeach, caption: 'Cannon Beach' },
+      { src: cannonBeachSunset, caption: 'Cannon Beach sunset' },
+      { src: haystackRock, caption: 'Haystack Rock' },
+    ]}></Entry>
   </Day>
 </Travelogue>
