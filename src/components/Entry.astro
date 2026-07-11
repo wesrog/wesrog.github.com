@@ -1,0 +1,61 @@
+---
+// src/components/Entry.astro
+import type { ImageMetadata } from 'astro';
+import Gallery from './Gallery.astro';
+import { formatTime } from '../lib/formatTime.mjs';
+
+type ImageInput =
+  | string
+  | ImageMetadata
+  | { src: string | ImageMetadata; caption?: string };
+
+interface Props {
+  time?: string;
+  images?: ImageInput[];
+}
+
+const { time, images = [] } = Astro.props;
+---
+<div class="entry">
+  <div class="entry-marker"></div>
+  <div class="entry-body">
+    {time && <div class="entry-time">{formatTime(time)}</div>}
+    <div class="entry-text"><slot /></div>
+    {images.length > 0 && <Gallery images={images} />}
+  </div>
+</div>
+
+<style>
+.entry {
+  position: relative;
+  margin-bottom: 1.4em;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-marker {
+  position: absolute;
+  left: -24px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-muted);
+}
+
+.entry-time {
+  font-size: 0.75em;
+  color: var(--color-muted);
+  margin-bottom: 0.3em;
+}
+
+.entry-text :global(p) {
+  margin: 0 0 0.5em;
+}
+
+.entry-text:empty {
+  display: none;
+}
+</style>

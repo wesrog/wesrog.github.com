@@ -1,0 +1,48 @@
+---
+// src/components/Day.astro
+import { formatDayHeading } from '../lib/formatDayHeading.mjs';
+
+interface Props {
+  date: string;
+}
+
+const { date } = Astro.props;
+---
+<div class="day">
+  <h2 class="day-heading">{formatDayHeading(date)}</h2>
+  <div class="day-entries">
+    <slot />
+  </div>
+</div>
+
+<style>
+.day {
+  margin-top: 2em;
+}
+
+.day:first-child {
+  margin-top: 0;
+}
+
+.day-heading {
+  font-size: 1.1em;
+  margin: 0 0 1em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.day-entries {
+  position: relative;
+  padding-left: 28px;
+}
+
+.day-entries::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: var(--color-border);
+}
+</style>
