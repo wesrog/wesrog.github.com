@@ -824,15 +824,17 @@ Expected: frontmatter block, then `import Travelogue ...` / `import Day ...` / `
 Run: `npm run build`
 Expected: build succeeds with no errors (this is the real type/compile check for all 223 generated `<Entry>` / `<Day>` tags).
 
-Run: `grep -c 'class="entry"' dist/blog/florigon/index.html`
+Note: the built page path is `dist/blog/2010-01-31-florigon/index.html` — the route keeps the post folder's date prefix in its slug (confirmed against existing posts; the `[...slug].astro` route only strips a trailing `/index`, not the date prefix). Also note: `npm run build` minifies HTML to one line per file, so `grep -c` counts matching *lines* (1, no matter how many matches), not occurrences — use `grep -o PATTERN file | wc -l` to count occurrences instead.
+
+Run: `grep -o 'class="entry"' dist/blog/2010-01-31-florigon/index.html | wc -l`
 Expected: `223`
 
-Run: `grep -c 'class="day-heading"' dist/blog/florigon/index.html`
-Expected: matches the number of distinct days in `scripts/florigon-staging/posts.json` (16, per the grouping check already run during planning) — run `grep -c 'class="day-heading"' dist/blog/florigon/index.html` and confirm it's `16`.
+Run: `grep -o 'class="day-heading"' dist/blog/2010-01-31-florigon/index.html | wc -l`
+Expected: matches the number of distinct days in `scripts/florigon-staging/posts.json` (16, per the grouping check already run during planning) — confirm it's `16`.
 
 - [ ] **Step 6: Manual visual check**
 
-Run: `npm run dev` in the background, open `http://localhost:4321/blog/florigon/`, scroll through and confirm: day headings render in order, timestamps look correct (e.g. the Feb 10 "We made it!!!" entry should NOT be under Feb 11 — this was the timezone bug fixed during planning), images load and lightbox on click. Stop the dev server.
+Run: `npm run dev` in the background, open `http://localhost:4321/blog/2010-01-31-florigon/`, scroll through and confirm: day headings render in order, timestamps look correct (e.g. the Feb 10 "We made it!!!" entry should NOT be under Feb 11 — this was the timezone bug fixed during planning), images load and lightbox on click. Stop the dev server.
 
 - [ ] **Step 7: Commit**
 
@@ -951,12 +953,12 @@ rm -rf src/content/blog/2010-02-22-cannon-beach
 - [ ] **Step 7: Build and verify**
 
 Run: `npm run build`
-Expected: build succeeds with no errors, and no longer produces `dist/blog/leaving/`, `dist/blog/carlsbad-caverns.../`, `dist/blog/made-it-to-sfo.../`, or `dist/blog/cannon-beach/`.
+Expected: build succeeds with no errors, and no longer produces `dist/blog/2010-02-01-leaving/`, `dist/blog/2010-02-04-carlsbad-caverns.../`, `dist/blog/2010-02-09-made-it-to-sfo.../`, or `dist/blog/2010-02-22-cannon-beach/`.
 
-Run: `grep -c 'Just now leaving Pensacola' dist/blog/florigon/index.html`
+Run: `grep -o 'Just now leaving Pensacola' dist/blog/2010-01-31-florigon/index.html | wc -l`
 Expected: `1`
 
-Run: `grep -c 'Haystack Rock' dist/blog/florigon/index.html`
+Run: `grep -o 'Haystack Rock' dist/blog/2010-01-31-florigon/index.html | wc -l`
 Expected: `1`
 
 - [ ] **Step 8: Commit**
@@ -1002,7 +1004,7 @@ Expected: prints `Florigon` (confirms the post is listed under its tag)
 
 - [ ] **Step 5: Final manual check**
 
-Run: `npm run dev` in the background. Visit `http://localhost:4321/blog/florigon/` and `http://localhost:4321/tags/florigon/` in a browser. Confirm: the trip reads top-to-bottom as a coherent timeline, the 4 folded-in entries (Leaving, Carlsbad Caverns, SFO, Cannon Beach) appear in their correct days with the right content, and no broken images. Stop the dev server.
+Run: `npm run dev` in the background. Visit `http://localhost:4321/blog/2010-01-31-florigon/` and `http://localhost:4321/tags/florigon/` in a browser. Confirm: the trip reads top-to-bottom as a coherent timeline, the 4 folded-in entries (Leaving, Carlsbad Caverns, SFO, Cannon Beach) appear in their correct days with the right content, and no broken images. Stop the dev server.
 
 - [ ] **Step 6: Commit**
 
