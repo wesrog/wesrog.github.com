@@ -129,6 +129,10 @@ test('escapeMdxText escapes curly braces', () => {
   assert.equal(escapeMdxText('a {b} c'), 'a \\{b\\} c');
 });
 
+test('escapeMdxText escapes angle brackets as HTML entities', () => {
+  assert.equal(escapeMdxText('We <3 Powell\'s!'), 'We &lt;3 Powell\'s!');
+});
+
 test('assignImageVars assigns sequential unique variable names, reusing repeats', () => {
   const entries = [
     { date: '2010-02-01', time: '08:00', text: '', images: ['a.jpg', 'b.jpg'] },

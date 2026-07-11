@@ -67,7 +67,7 @@ export function groupByDay(entries) {
 }
 
 export function escapeMdxText(text) {
-  return text.replace(/[{}]/g, (c) => `\\${c}`);
+  return text.replace(/</g, '&lt;').replace(/[{}]/g, (c) => `\\${c}`);
 }
 
 export function assignImageVars(entries) {
