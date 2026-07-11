@@ -3,9 +3,10 @@ interface Props {
   src: string;
 }
 const { src } = Astro.props;
+const filename = decodeURIComponent(src.split('/').pop() ?? '').replace(/\.[\w-]{8}(\.[^.]+)$/, '$1');
 ---
 <div class="audio-player">
-  <button class="audio-play-btn" data-src={src}>▶ Play</button>
+  <button class="audio-play-btn" data-src={src} data-filename={filename}>▶ Play {filename}</button>
   <span class="audio-now-playing" style="display: none">now playing ↓</span>
 </div>
 
@@ -33,8 +34,10 @@ function setupAudioPlayers() {
     btn.dataset.wired = 'true';
     btn.addEventListener('click', () => {
       const src = btn.dataset.src ?? '';
+      const filename = btn.dataset.filename ?? '';
       const title = document.querySelector('h1')?.textContent?.trim() ?? '';
-      document.dispatchEvent(new CustomEvent('play-track', { detail: { src, title } }));
+      const url = location.href;
+      document.dispatchEvent(new CustomEvent('play-track', { detail: { src, filename, title, url } }));
       btn.style.display = 'none';
       const label = btn.nextElementSibling as HTMLElement | null;
       if (label) label.style.display = '';

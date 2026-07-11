@@ -1,7 +1,7 @@
 ---
 ---
 <div id="persistent-player" transition:persist style="display: none">
-  <span class="pp-title"></span>
+  <span class="pp-status">playing <span class="pp-filename"></span> from <a class="pp-title" href="#"></a></span>
   <audio controls></audio>
   <button class="pp-close" aria-label="Close player">✕</button>
 </div>
@@ -20,14 +20,24 @@
   background: var(--color-bg);
   border-top: 1px solid var(--color-border);
 }
-.pp-title {
-  flex-shrink: 0;
-  max-width: 200px;
+.pp-status {
+  flex-shrink: 1;
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 0.875em;
   color: var(--color-muted);
+}
+.pp-filename {
+  color: var(--color-text);
+}
+.pp-title {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+.pp-title:hover {
+  text-decoration: underline;
 }
 #persistent-player audio {
   flex: 1;
@@ -68,15 +78,18 @@ document.addEventListener('astro:page-load', () => {
   bar.dataset.initialized = 'true';
 
   const audio = bar.querySelector('audio') as HTMLAudioElement;
-  const titleEl = bar.querySelector('.pp-title') as HTMLElement;
+  const filenameEl = bar.querySelector('.pp-filename') as HTMLElement;
+  const titleEl = bar.querySelector('.pp-title') as HTMLAnchorElement;
   const closeBtn = bar.querySelector('.pp-close') as HTMLButtonElement;
 
   document.addEventListener('play-track', (e) => {
-    const { src, title } = (e as CustomEvent<{ src: string; title: string }>).detail;
+    const { src, filename, title, url } = (e as CustomEvent<{ src: string; filename: string; title: string; url: string }>).detail;
     const resolvedSrc = new URL(src, location.href).href;
     if (audio.src === resolvedSrc && !audio.paused) return;
     audio.src = src;
+    filenameEl.textContent = filename;
     titleEl.textContent = title;
+    titleEl.href = url;
     showBar();
     audio.play().catch(() => {});
   });
