@@ -1,3 +1,7 @@
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
 const ENTITIES = {
   '&lt;': '<',
   '&gt;': '>',
@@ -118,4 +122,34 @@ ${imageImports}
 ${dayBlocks}
 </Travelogue>
 `;
+}
+
+const FRONTMATTER = `---
+title: Florigon
+date: '2010-01-31'
+tags: [florigon]
+description: A road trip from Pensacola, FL to Portland, OR — Feb 2010.
+---
+`;
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const __dirname = dirname(fileURLToPath(import.meta.url));
+  const REPO_ROOT = join(__dirname, '..');
+  const STAGING_DIR = join(__dirname, 'florigon-staging');
+  const OUT_DIR = join(REPO_ROOT, 'src', 'content', 'blog', '2010-01-31-florigon');
+
+  mkdirSync(OUT_DIR, { recursive: true });
+
+  const posts = JSON.parse(readFileSync(join(STAGING_DIR, 'posts.json'), 'utf8'));
+  const entries = entriesFromPosts(posts);
+  const usedFiles = new Set(entries.flatMap((e) => e.images));
+
+  for (const file of usedFiles) {
+    copyFileSync(join(STAGING_DIR, 'images', file), join(OUT_DIR, file));
+  }
+
+  const mdx = FRONTMATTER + '\n' + buildMdxBody(posts);
+  writeFileSync(join(OUT_DIR, 'index.mdx'), mdx);
+
+  console.log(`Wrote ${join(OUT_DIR, 'index.mdx')} with ${entries.length} entries, ${usedFiles.size} images`);
 }
