@@ -1,19 +1,20 @@
 ---
 title: Pink Banana Smoothie
-date: '2009-07-19'
+date: "2009-07-19"
 tags:
   - food
+  - recipes
 ---
 
 This is the best smoothie I’ve ever made and it’s really easy, granted you have a blender on hand.
 
 #### Ingredients:
 
--   1 ripe banana (softer the better)
--   4-5 medium strawberries with tops cut off and quartered
--   ½ cup vanilla yogurt
--   1 ½ cup ice (or more if you want it thicker)
--   0 cups of sugar
+- 1 ripe banana (softer the better)
+- 4-5 medium strawberries with tops cut off and quartered
+- ½ cup vanilla yogurt
+- 1 ½ cup ice (or more if you want it thicker)
+- 0 cups of sugar
 
 #### Directions:
 

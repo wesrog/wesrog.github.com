@@ -51,9 +51,18 @@ const { posts, related } = Astro.props;
     <ul class="post-list">
       {posts.map(post => (
         <li>
-          <time class="post-meta" datetime={post.data.date.toISOString()}>
-            {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </time>
+          <div class="post-header">
+            <time class="post-meta" datetime={post.data.date.toISOString()}>
+              {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            {post.data.tags.length > 0 && (
+              <span class="post-tags">
+                {post.data.tags.map((t: string) => (
+                  <a href={`/tags/${t}/`} class="post-tag">{t}</a>
+                ))}
+              </span>
+            )}
+          </div>
           <a href={`/blog/${postSlug(post.id)}/`}>{post.data.title}</a>
         </li>
       ))}
@@ -67,6 +76,7 @@ h1 { margin-bottom: 0.5em; }
 .related-tags .post-tag { margin-left: 0.5em; }
 .post-list { list-style: none; padding: 0; }
 .post-list li { margin-bottom: 1em; }
+.post-header { display: flex; align-items: center; flex-wrap: wrap; }
 time { display: block; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }

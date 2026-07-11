@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz77rc8g1pkhmFFL92_1280.jpg)
-
-**Home Office**

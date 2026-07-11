@@ -1,8 +1,8 @@
 ---
 title: Motley Crew of Rocks
-date: '2008-08-18'
+date: "2008-08-18"
+tags:
+  - photography
 ---
 
 ![](./aXuJeHmz7crwlftoHHn1iqc7_1280.jpg)
-
-**Motley Crew of Rocks**

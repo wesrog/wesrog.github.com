@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7c9g0zyvxftbRi0N_1280.jpg)
-
-**Deskabstracts**

@@ -93,9 +93,20 @@ th { background-color: var(--color-code-bg); }
   font-size: 0.875em;
 }
 
-.post-tags { display: inline; margin-left: 1em; }
-.post-tag { color: var(--color-muted); font-size: 0.875em; margin-right: 0.5em; text-decoration: none; }
-.post-tag::before { content: '#'; }
+.post-tags { display: inline-flex; flex-wrap: wrap; gap: 0.4em; margin-left: 1em; vertical-align: middle; }
+.post-tag {
+  color: var(--color-muted);
+  font-size: 0.8em;
+  text-decoration: none;
+  padding: 0.15em 0.6em;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-code-bg);
+}
 .post-tag:visited { color: var(--color-muted); }
+.post-tag:hover {
+  color: var(--color-link);
+  border-color: var(--color-link);
+}
 
 body.player-active { padding-bottom: 80px; }

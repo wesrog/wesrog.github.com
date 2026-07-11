@@ -1,5 +1,5 @@
 ---
-title: "Lily Upclose: Really great smile. Love it!"
+title: "Lily Upclose"
 date: "2008-08-03"
 tags:
   - photography
@@ -7,4 +7,4 @@ tags:
 
 ![](./aXuJeHmz7c6rg8iov5xlglsa_1280.jpg)
 
-**Lily Upclose:** Really great smile. Love it!
+Really great smile. Love it!

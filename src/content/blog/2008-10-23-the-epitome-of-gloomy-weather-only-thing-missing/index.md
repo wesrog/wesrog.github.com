@@ -1,6 +1,6 @@
 ---
-title: The epitome of gloomy weather. Only thing missing is a lonesome foghorn.
-date: '2008-10-23'
+title: Gloomy
+date: "2008-10-23"
 tags:
   - photography
 ---

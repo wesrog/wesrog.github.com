@@ -1,6 +1,8 @@
 ---
 title: Beach in the Evening
-date: '2009-08-20'
+date: "2009-08-20"
+tags:
+  - photography
 ---
 
 ![](./tumblr_koopfyyMSo1qz70lno1_1280.jpg)

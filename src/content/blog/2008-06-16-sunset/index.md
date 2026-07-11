@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7ab5mocuc0aLEn83_1280.jpg)
-
-**Sunset**

@@ -1,10 +1,10 @@
 ---
-title: "Wind Vane: This was taken at my grandmother's house."
-date: '2008-09-05'
+title: "Wind Vane"
+date: "2008-09-05"
 tags:
   - photography
 ---
 
 ![](./aXuJeHmz7dhlnkzaWZ3orSiT_1280.jpg)
 
-**Wind Vane:** This was taken at my grandmother’s house.
+This was taken at my grandmother’s house.

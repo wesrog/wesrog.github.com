@@ -1,5 +1,5 @@
 ---
-title: "sax: a sax light on this huge machine thing"
+title: "neon sax"
 date: "2007-12-17"
 tags:
   - photography
@@ -7,4 +7,4 @@ tags:
 
 ![](./aXuJeHmz732v96leBaUnVc1N_500.jpg)
 
-**sax:** a sax light on this huge machine thing
+a sax light on this huge machine thing

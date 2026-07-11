@@ -1,5 +1,5 @@
 ---
-title: "Chicago Parks Here: Colleen's Exposure. Minor adjustments made."
+title: "Chicago Parks Here"
 date: "2008-04-12"
 tags:
   - photography
@@ -7,4 +7,4 @@ tags:
 
 ![](./aXuJeHmz77pzgtfhSWHIO0cf_1280.jpg)
 
-**Chicago Parks Here:** Colleen’s Exposure. Minor adjustments made.
+Colleen’s Exposure. Minor adjustments made.
