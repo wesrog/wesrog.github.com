@@ -60,12 +60,11 @@ const rendered = await Promise.all(page.data.map(async post => {
   border-bottom: 1px solid var(--color-border);
 }
 .post-list li:last-child { border-bottom: none; }
-.post-header { display: flex; align-items: center; flex-wrap: wrap; }
 time { display: block; }
 h2 { margin: 0.25em 0 0.5em; font-size: 1.25em; }
-a { text-decoration: none; color: var(--color-text); }
+a:not(.post-tag) { text-decoration: none; color: var(--color-text); }
 a:hover h2 { text-decoration: underline; }
-a:visited { color: var(--color-text); }
+a:not(.post-tag):visited { color: var(--color-text); }
 .intro { color: var(--color-muted); font-size: 0.95em; margin: 0 0 calc(var(--spacing) * 1.5); }
 .intro a { color: var(--color-link); }
 .intro a:visited { color: var(--color-link-visited); }

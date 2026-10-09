@@ -93,7 +93,8 @@ th { background-color: var(--color-code-bg); }
   font-size: 0.875em;
 }
 
-.post-tags { display: inline-flex; flex-wrap: wrap; gap: 0.4em; margin-left: 1em; vertical-align: middle; }
+.post-header { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4em 1em; }
+.post-tags { display: inline-flex; flex-wrap: wrap; gap: 0.4em; }
 .post-tag {
   color: var(--color-muted);
   font-size: 0.8em;
