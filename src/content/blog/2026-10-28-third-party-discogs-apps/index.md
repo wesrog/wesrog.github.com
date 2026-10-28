@@ -1,7 +1,7 @@
 ---
 title: Third-Party Discogs Apps
 date: "2026-10-28"
-description: A running list of unofficial apps, web tools, browser extensions and self-hosted projects built on the Discogs API.
+description: 64 unofficial apps, web tools, browser extensions and self-hosted projects built on the Discogs API, sorted by what they do.
 tags:
   - music
   - software
@@ -10,8 +10,9 @@ tags:
 ---
 
 Discogs is the database everyone uses, but plenty of collectors would rather
-browse it through something else. Here's a running list of the unofficial apps, web tools, browser extensions and self-hosted projects built on
-the Discogs API. None of them are affiliated with Discogs.
+browse it through something else. So far I've found **64 unofficial apps, web
+tools, browser extensions and self-hosted projects** built on the Discogs API,
+sorted below by what they do. None of them are affiliated with Discogs.
 
 The official app, for reference, is [Discogs for iOS](https://apps.apple.com/app/id1036449551) /
 [Android](https://play.google.com/store/apps/details?id=com.discogs.app).
