@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SECTIONS, APPS, PLATFORMS } from '../data/discogs-apps';
+
+const sections = SECTIONS
+  .map((sec) => ({ ...sec, items: APPS.filter((a) => a.s === sec.id) }))
+  .filter((sec) => sec.items.length);
+---
+<BaseLayout
+  title="Third-Party Discogs Apps"
+  description="A running directory of unofficial apps, web tools, browser extensions and self-hosted projects built on the Discogs API."
+>
+  <article class="wrapper discogs-apps">
+    <h1>Third-Party Discogs Apps</h1>
+    <p>Discogs is the database everyone uses, but plenty of collectors would rather browse it through something else. Here's a running list of the unofficial apps, web tools, browser extensions and self-hosted projects built on the Discogs API.</p>
+    <p class="post-meta">Last updated October 2026 · {APPS.length} entries · None of these are affiliated with Discogs</p>
+
+    <div class="da-controls">
+      <input type="search" class="da-search" placeholder="Search (offline, random, value, DJ…)" aria-label="Search apps" />
+      <div class="da-chips" role="group" aria-label="Filter by platform">
+        {PLATFORMS.map((p) => (
+          <button type="button" class="da-chip" data-p={p} aria-pressed={p === 'All' ? 'true' : 'false'}>{p}</button>
+        ))}
+      </div>
+    </div>
+
+    {sections.map((sec) => (
+      <section class="da-section">
+        <h2>{sec.title}</h2>
+        {sec.note && <p class="da-note">{sec.note}</p>}
+        <div class="da-grid">
+          {sec.items.map((a) => (
+            <div class="da-card" data-platforms={a.p.join('|')} data-text={`${a.name} ${a.d} ${a.p.join(' ')}`.toLowerCase()}>
+              <a class="da-name" href={a.url} target="_blank" rel="noopener">{a.name}</a>
+              <p>{a.d}</p>
+              <div class="da-tags">
+                {a.p.map((p) => <span class="da-tag">{p}</span>)}
+                {a.price && <span class="da-tag da-price">{a.price}</span>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+    <p class="da-empty" hidden>Nothing matches that filter.</p>
+
+    <p class="post-meta da-footnote">
+      Descriptions are my own summaries of each app's stated features, not reviews. Prices and features change, so check the listing before installing.
+      The official app is <a href="https://apps.apple.com/app/id1036449551">Discogs for iOS</a> / <a href="https://play.google.com/store/apps/details?id=com.discogs.app">Android</a>.
+    </p>
+  </article>
+</BaseLayout>
+
+<script>
+  // Runs on every page load under the ClientRouter; no-ops on other pages.
+  document.addEventListener('astro:page-load', () => {
+    const root = document.querySelector<HTMLElement>('.discogs-apps');
+    if (!root) return;
+    const search = root.querySelector<HTMLInputElement>('.da-search')!;
+    const chips = [...root.querySelectorAll<HTMLButtonElement>('.da-chip')];
+    const cards = [...root.querySelectorAll<HTMLElement>('.da-card')];
+    const sections = [...root.querySelectorAll<HTMLElement>('.da-section')];
+    const empty = root.querySelector<HTMLElement>('.da-empty')!;
+    let active = 'All';
+
+    const apply = () => {
+      const q = search.value.trim().toLowerCase();
+      let shown = 0;
+      for (const c of cards) {
+        const ok = (active === 'All' || c.dataset.platforms!.split('|').includes(active))
+          && (!q || c.dataset.text!.includes(q));
+        c.hidden = !ok;
+        if (ok) shown++;
+      }
+      for (const s of sections) s.hidden = !s.querySelector('.da-card:not([hidden])');
+      empty.hidden = shown > 0;
+    };
+
+    root.querySelector('.da-chips')!.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLButtonElement>('.da-chip');
+      if (!b) return;
+      active = b.dataset.p!;
+      chips.forEach((c) => c.setAttribute('aria-pressed', String(c === b)));
+      apply();
+    });
+    search.addEventListener('input', apply);
+  });
+</script>
+
+<style>
+  .da-controls {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--color-bg);
+    padding: 12px 0;
+    margin: var(--spacing) 0 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .da-search {
+    width: 100%;
+    padding: 0.5em 0.75em;
+    font: inherit;
+    font-size: 0.9em;
+    color: var(--color-text);
+    background: var(--color-code-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+  }
+  .da-chips { display: flex; flex-wrap: wrap; gap: 0.4em; margin-top: 10px; }
+  .da-chip {
+    font: inherit;
+    font-size: 0.75em;
+    padding: 0.2em 0.75em;
+    border-radius: 999px;
+    cursor: pointer;
+    color: var(--color-muted);
+    background: var(--color-code-bg);
+    border: 1px solid var(--color-border);
+  }
+  .da-chip:hover { color: var(--color-link); border-color: var(--color-link); }
+  .da-chip[aria-pressed='true'] { color: var(--color-bg); background: var(--color-link); border-color: var(--color-link); }
+  .da-section { margin-top: calc(var(--spacing) * 1.2); }
+  .da-section h2 { margin-bottom: 0.2em; }
+  .da-note { color: var(--color-muted); font-size: 0.875em; margin: 0 0 1em; }
+  .da-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+  .da-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    padding: 0.9em 1em;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 0.85em;
+  }
+  .da-card p { margin: 0; }
+  .da-name { font-weight: 600; text-decoration: none; }
+  .da-name:hover { text-decoration: underline; }
+  .da-tags { display: flex; flex-wrap: wrap; gap: 0.3em; margin-top: auto; padding-top: 0.3em; }
+  .da-tag {
+    font-size: 0.8em;
+    color: var(--color-muted);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 0 0.4em;
+  }
+  .da-price { color: var(--color-link); border-color: var(--color-link); }
+  .da-empty { color: var(--color-muted); }
+  .da-footnote { margin-top: calc(var(--spacing) * 2); }
+  [hidden] { display: none !important; }
+</style>
