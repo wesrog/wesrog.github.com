@@ -30,7 +30,9 @@ Full replacements for the official app: browse, search, and edit your collection
 - **[FreshCogs](https://apps.apple.com/app/id6446179457)** — Lightweight client for viewing your Discogs collection. _(iOS · Free)_
 - **[Vinyl Crate](https://apps.apple.com/app/vinylcrate/id6754758604)** — Collection stats beyond value: rarity scores from community data, breakdowns by artist/year/genre. Data stays on device; Discogs sync is optional. _(iOS, Mac · Free)_
 - **[Vinyl Record App](https://apps.apple.com/app/id1114331735)** — Collection and wantlist with a social feed of what friends are adding. Two-way Discogs sync and a random record widget. _(iOS · Free + $3.99/mo)_
-- **[Groovv](https://alternativeto.net/software/groovv/)** — Cross-platform collection app that pairs with Discogs: barcode scanning, condition tracking, and visual browsing. One of the few current options on Android. _(iOS, Android)_
+- **[Spinstack](https://spinstackios.app/)** — Native Apple client with two-way Discogs sync that runs on iPhone, iPad, Mac and Apple TV. _(iOS, Mac)_
+- **[Plastic](https://myplastic.app/)** — Collection app for vinyl, CDs and tapes that stays synced with Discogs and gives you a public page showing off your records. _(iOS, Android · Free)_
+- **[Groovv](https://www.groovv.app/)** — Cross-platform collection app that pairs with Discogs: barcode scanning, condition tracking, and visual browsing. One of the few current options on Android. _(iOS, Android)_
 - **[Disko for Discogs](https://apps.microsoft.com/detail/9nblggh4wdr2)** — Windows client for searching Discogs and managing wantlist, collection and lists, with Spotify lookup. _(Windows)_
 - **[Spinner for Discogs](https://snapupdates.popey.com/snap/spinner-for-discogs)** — Linux desktop client (snap). Browse collection and wantlist, spin a wheel for a random album, and control Spotify or YouTube Music. _(Linux · Free · MIT)_
 
@@ -42,6 +44,8 @@ Treat the collection like a portfolio.
 - **[Wax](https://apps.apple.com/app/id6760012383)** — Catalog with condition grading and listen logging; the Pro tier adds live value estimates from marketplace data plus CSV/PDF export. _(iOS · Free + Pro)_
 - **[Deadwax (pressing guide)](https://apps.apple.com/app/id6762251685)** — Focuses on which pressing you own and whether it's a keeper, with badges for notable pressings. Not to be confused with the DeadWax spin tracker below. _(iOS)_
 
+- **[Vizcogs](https://www.vizcogs.com/)** — Turns your collection into interactive charts, value tracking over time, and cover browsers. Free tier covers your full collection with a handful of syncs a month. _(Web · Free + $4/mo)_
+
 ### Listening, spins & random pickers
 
 For deciding what to put on next, and logging what you played.
@@ -50,6 +54,10 @@ For deciding what to put on next, and logging what you played.
 - **[SpinRoom for Discogs](https://mlpsoftware.itch.io/spinroom-for-discogs)** — Browse by album, artist or song; a random picker that can favor records you haven't played lately; Genius bios and lyrics while it spins. _(Mobile)_
 - **[Too Many Records!](https://apps.apple.com/us/app/-/id6449257927)** — Does one thing: picks a random record from your collection, with format filters. _(iOS · Free)_
 - **[DiscoJanice](https://apps.apple.com/app/id6740820977)** — Random album picker with Siri Shortcuts. Collects no data. _(iOS, Mac · Free)_
+- **[Spun It](https://spunit.io/)** — Log every spin and see what friends are playing, with two-way Discogs sync. Has a "wrapped"-style yearly recap. _(Web, iOS, Android · Free + premium)_
+- **[What next?](https://discogs-randomizer.netlify.app/)** — Type in a Discogs username and it picks a random record. No login needed. _(Web · Free)_
+- **[Open Scrobbler](https://openscrobbler.com/)** — Web-based Last.fm scrobbler with a Discogs integration, so a record you're spinning can count toward your listening stats. _(Web · Free · Open source)_
+- **[Discrobble](https://elezea.com/discrobble/)** — Scrobbles records from your Discogs collection to Last.fm so physical plays show up there too. _(iOS)_
 - **[Record Selektah](https://palmaradio.substack.com/p/the-record-selektah)** — Local Python app that picks your next record semi-randomly, weighting favorites and rotating decades and genres, with listening stats on the side. _(Self-hosted · Free)_
 
 ### Digging & scanning
@@ -60,6 +68,14 @@ Built for the record store: scan a barcode, check the price, avoid duplicates.
 - **[Scan My Records](https://apps.apple.com/app/id6476490241)** — Barcode-first adding to collection and wantlist, pitched at both collectors and record shops. _(iOS · Free)_
 - **[VinylBox](https://apps.apple.com/app/id1212071750)** — Collection tracking plus selling: list to the marketplace with price suggestions and manage listings. Price-tracking widget. _(iOS · Free + IAP)_
 
+### Wantlist alerts & buying
+
+For catching a grail the moment it's listed, or bundling purchases from one seller.
+
+- **[discdogs](https://discdogs.app/)** — Watches the marketplace and pings you by email or Telegram, usually within seconds, when a wantlist item is listed. Filter by price, condition, seller rating and shipping region. _(Web)_
+- **[Discogs TopTool](https://addons.mozilla.org/en-US/firefox/addon/discogs-toptool/)** — Firefox extension whose Smart Buy finds sellers carrying several of your wants at once. Also compares your collection/wantlist with other users and sorts listings by rarity or want/have ratio. _(Extension · Free)_
+- **[discogs_alert](https://github.com/michaelhball/discogs_alert)** — Run-it-yourself wantlist alerts (Python or Docker) with notifications via ntfy, Pushbullet, Telegram or Gmail. _(Self-hosted · Open source)_
+
 ### DJ tools
 
 - **[kallax](https://apps.apple.com/app/kallax/id6758233437)** — For vinyl DJs: tags your collection with BPM and builds sets sorted by tempo, genre or mood. _(iOS · Free + IAP)_
@@ -67,7 +83,11 @@ Built for the record store: scan a barcode, check the price, avoid duplicates.
 ### Web tools & browser extensions
 
 - **[Discogs Enhancer](https://addons.mozilla.org/addon/discogs-enhancer/)** — The power-user browser extension: dark mode, price comparisons and currency conversion, multi-column collection sorting, charts and stats. Chrome and Firefox. _(Extension · Free + Pro)_
-- **[Waxlog](https://www.crunchbase.com/organization/waxlog)** — Crate-digging style collection explorer with stackable filters and grouping, plus shareable curated lists. _(Web · Free + premium)_
+- **[Waxlog](https://waxlog.com/)** — Crate-digging collection explorer: browse your records as 3D crates, stack filters and groupings, and share curated lists. Free tier syncs manually once a week. _(Web · Free + $5/mo)_
+- **[FilterMyDiscogs](https://www.filtermydisco.gs/)** — Search and filter your collection, play tracks in-app, and build playlists, crates and cover-art mosaics. _(Web · Free)_
+- **[discogs-collection](https://dhrandy.github.io/discogs-collection/discogs-collection.html)** — Single-file, client-side page: enter a username to search, filter and sort a collection or wantlist, with a random picker. No server. _(Web · Free · Open source)_
+- **[Vinyl Library](https://github.com/koz/vinyl-library)** — Renders your collection as a 3D record shelf you can share via snapshot links. Hosted demo, or run your own. _(Web, Self-hosted · Open source)_
+- **[Discogs Digger](https://chromeboard.com/extension/discogs-digger-aknebbllkkmadhljmbbdgmdfkceandkp)** — Chrome extension with a free dark theme; Pro adds deal analysis, seller trust scores, marketplace filters and a YouTube-powered jukebox. _(Extension · Free + Pro)_
 - **[Discogs collection visualizer](https://cables.gl/p/sOc9Zr)** — Quick experiment that tiles a user's whole collection as thumbnails. _(Web · Free)_
 
 ### Self-hosted & open source
@@ -96,6 +116,7 @@ Third-party apps that became (or preceded) the official ones.
 
 - **[MilkCrate](https://www.thevinylfactory.com/features/the-official-new-discogs-app)** — Popular indie iOS client whose success shaped the official iOS app in 2016. _(iOS · Defunct)_
 - **[Discographer](https://www.androidpolice.com/2016/07/13/official-discogs-app-spins-play-store/)** — Andreas Dahl's Android client. Discogs partnered with him and it became the official Android app. _(Android · Defunct)_
+- **[Wantlister](https://djmag.com/news/discogs-introduces-filters-wantlist-through-new-acquisition)** — Stoat Labs' wantlist filtering tool. Discogs acquired it in June 2024 and folded it into the site. _(Web · Acquired)_
 - **[Discollector](https://factmag.com/2015/04/21/discollector-app-android-discogs)** — MilkCrate's Android sibling, one of the first serious Discogs apps on the platform. _(Android · Defunct)_
 
 ---
