@@ -21,7 +21,7 @@ The official app, for reference, is [Discogs for iOS](https://apps.apple.com/app
 Full replacements for the official app: browse, search, and edit your collection and wantlist.
 
 - **[Discographic for Discogs](https://apps.apple.com/us/app/discographic-for-discogs/id979196369)** — Long-running, very complete client. Folders, custom fields, full offline cache, spreadsheet export, quick marketplace listing, plus Apple Music/Spotify playback and Last.fm scrobbling. _(iOS · Free + IAP)_
-- **[Wax & Spindle](https://hunted.space/product/wax-spindle)** — Artwork-first client that stores your collection on the device for fast, offline browsing. Wantlist shows lowest current asks. No ads, subscriptions or tracking. _(iOS · Free)_
+- **[Wax & Spindle](https://play.google.com/store/apps/details?id=app.waxandspindle)** — Artwork-first client that stores your collection on the device for fast, offline browsing. Wantlist shows lowest current asks. No ads, subscriptions or tracking. _(iOS, Android · Free)_
 - **[SnapVinyl for Discogs](https://apps.apple.com/app/id6741057688)** — Clean client with barcode and OCR text recognition for adding records, automatic translation of release notes, and a random pick button. _(iOS · Free)_
 - **[My Vinyl+](https://apps.apple.com/app/id1547173908)** — Renders each record as a virtual disc matching its real vinyl color. Collection value trends, Record Store Day browser, home-screen widgets, and listing to the marketplace. Has its own subreddit, r/MyVinyl. _(iOS, Mac · Free + subscription)_
 - **[NeedleDrop](https://apps.apple.com/app/id6760035957)** — Collection viewer tuned for iPad, with landscape layouts and high-res cover art. _(iOS · Free + IAP)_
@@ -32,6 +32,9 @@ Full replacements for the official app: browse, search, and edit your collection
 - **[Vinyl Record App](https://apps.apple.com/app/id1114331735)** — Collection and wantlist with a social feed of what friends are adding. Two-way Discogs sync and a random record widget. _(iOS · Free + $3.99/mo)_
 - **[Spinstack](https://spinstackios.app/)** — Native Apple client with two-way Discogs sync that runs on iPhone, iPad, Mac and Apple TV. _(iOS, Mac)_
 - **[Plastic](https://myplastic.app/)** — Collection app for vinyl, CDs and tapes that stays synced with Discogs and gives you a public page showing off your records. _(iOS, Android · Free)_
+- **[Gatefold FM](https://gatefold.fm/)** — Puts vinyl, CDs, tapes and digital files on one shelf, with an AI "clerk", a second-screen now-playing display, stylus-hour tracking and an offline record-store mode. One-way Discogs import that never writes back. _(iOS, Android · Free up to 10 records + subscription)_
+- **[Piper](https://piper.ldelosheros.com/)** — Imports your Discogs collection and lets you lay out shelving units that mirror where each record physically sits. _(Web, iOS, Mac · Free + IAP)_
+- **[Needl Vinyl](https://apps.apple.com/app/id6754252048)** — Catalog with value tracking and synced lyrics; imports your Discogs collection and wantlist. Runs on iPhone, iPad, Apple TV and Watch. _(iOS · Free + subscription)_
 - **[Groovv](https://www.groovv.app/)** — Cross-platform collection app that pairs with Discogs: barcode scanning, condition tracking, and visual browsing. One of the few current options on Android. _(iOS, Android)_
 - **[Disko for Discogs](https://apps.microsoft.com/detail/9nblggh4wdr2)** — Windows client for searching Discogs and managing wantlist, collection and lists, with Spotify lookup. _(Windows)_
 - **[Spinner for Discogs](https://snapupdates.popey.com/snap/spinner-for-discogs)** — Linux desktop client (snap). Browse collection and wantlist, spin a wheel for a random album, and control Spotify or YouTube Music. _(Linux · Free · MIT)_
@@ -67,6 +70,7 @@ Built for the record store: scan a barcode, check the price, avoid duplicates.
 
 - **[Vinyl – Scan and see the info](https://apps.apple.com/app/id1433818198)** — Simple digging companion: scan, see the pressing, compare prices. Built without trackers or ads. _(iOS · Free + IAP)_
 - **[Scan My Records](https://apps.apple.com/app/id6476490241)** — Barcode-first adding to collection and wantlist, pitched at both collectors and record shops. _(iOS · Free)_
+- **[Runout](https://runout.io/)** — Built to make adding records fast, plus browsing and searching your collection while flipping through crates. Connects through the Discogs API. _(Web)_
 - **[Record Scanner](https://recordscanner.com/)** — Identify a record from a cover photo, barcode or catalog number and see its value from Discogs sales data; can create Discogs listings. _(iOS, Android)_
 - **[VinylAI](https://vinylai.app/)** — Photo- and barcode-based identification that narrows down the likely pressing, with values drawn from Discogs market data. No account needed. _(iOS, Android · Free)_
 - **[VinylBox](https://apps.apple.com/app/id1212071750)** — Collection tracking plus selling: list to the marketplace with price suggestions and manage listings. Price-tracking widget. _(iOS · Free + IAP)_
@@ -110,6 +114,7 @@ Run it yourself. Handy if you want to own your data or hack on it.
 
 Inventory sync and storefront plugins for people selling on the Discogs marketplace.
 
+- **[PowerCogs](https://powercogs.com/)** — Syncs collection and wantlist, with better gallery, sharing and printable lists than Discogs, plus seller tools such as hosting listing photos and inserting them into descriptions. _(Web)_
 - **[Disconnect (ConstaCloud)](https://apps.shopify.com/disconnect-by-constacloud-1)** — Syncs listings, orders, pricing and inventory between Discogs and Shopify, WooCommerce or Wix. _(Web · Paid)_
 - **[Blocks for Discogs Sellers](https://wordpress.org/plugins/?p=279240)** — WordPress blocks that embed your seller badge, profile stats, inventory grid, or single listings on your own site. _(Web · Free)_
 
