@@ -58,6 +58,7 @@ For deciding what to put on next, and logging what you played.
 - **[What next?](https://discogs-randomizer.netlify.app/)** — Type in a Discogs username and it picks a random record. No login needed. _(Web · Free)_
 - **[Open Scrobbler](https://openscrobbler.com/)** — Web-based Last.fm scrobbler with a Discogs integration, so a record you're spinning can count toward your listening stats. _(Web · Free · Open source)_
 - **[Discrobble](https://elezea.com/discrobble/)** — Scrobbles records from your Discogs collection to Last.fm so physical plays show up there too. _(iOS)_
+- **[Analog](https://apps.apple.com/us/app/analog-vinyl-sessions/id6767884568)** — Listens to your turntable, recognizes which record and side is playing from your Discogs collection, tracks the session, and suggests what to play next. _(iOS, Apple Watch)_
 - **[Record Selektah](https://palmaradio.substack.com/p/the-record-selektah)** — Local Python app that picks your next record semi-randomly, weighting favorites and rotating decades and genres, with listening stats on the side. _(Self-hosted · Free)_
 
 ### Digging & scanning
@@ -66,6 +67,8 @@ Built for the record store: scan a barcode, check the price, avoid duplicates.
 
 - **[Vinyl – Scan and see the info](https://apps.apple.com/app/id1433818198)** — Simple digging companion: scan, see the pressing, compare prices. Built without trackers or ads. _(iOS · Free + IAP)_
 - **[Scan My Records](https://apps.apple.com/app/id6476490241)** — Barcode-first adding to collection and wantlist, pitched at both collectors and record shops. _(iOS · Free)_
+- **[Record Scanner](https://recordscanner.com/)** — Identify a record from a cover photo, barcode or catalog number and see its value from Discogs sales data; can create Discogs listings. _(iOS, Android)_
+- **[VinylAI](https://vinylai.app/)** — Photo- and barcode-based identification that narrows down the likely pressing, with values drawn from Discogs market data. No account needed. _(iOS, Android · Free)_
 - **[VinylBox](https://apps.apple.com/app/id1212071750)** — Collection tracking plus selling: list to the marketplace with price suggestions and manage listings. Price-tracking widget. _(iOS · Free + IAP)_
 
 ### Wantlist alerts & buying
