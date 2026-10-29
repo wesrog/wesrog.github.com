@@ -23,6 +23,9 @@ const { title, description = 'Thoughts and waves from Wes Rogers.', noindex = fa
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate" type="application/rss+xml" title="WR" href="/rss.xml" />
     <ClientRouter />
+    {import.meta.env.PROD && (
+      <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dc92765288a14c10aef52e9947773e5e"}'></script>
+    )}
   </head>
   <body>
   <script>
