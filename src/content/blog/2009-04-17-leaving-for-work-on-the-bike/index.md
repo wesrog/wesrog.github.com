@@ -5,5 +5,3 @@ tags:
   - bicycling
   - status
 ---
-
-Leaving for work on the bike

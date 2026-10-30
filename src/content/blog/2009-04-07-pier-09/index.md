@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7lzk2jxbYhlRt25Zo1_1280.jpg)
-
-**Pier ‘09**

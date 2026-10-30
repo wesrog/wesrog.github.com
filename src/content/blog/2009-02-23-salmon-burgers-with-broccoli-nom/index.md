@@ -5,5 +5,3 @@ tags:
   - food
   - status
 ---
-
-Salmon burgers with broccoli. Nom!

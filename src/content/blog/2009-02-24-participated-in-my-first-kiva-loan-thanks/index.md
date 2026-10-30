@@ -5,5 +5,3 @@ tags:
   - life
   - status
 ---
-
-Participated in my first Kiva loan. Thanks @CocoDesign!

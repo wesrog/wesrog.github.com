@@ -5,5 +5,3 @@ tags:
   - bicycling
   - status
 ---
-
-gonna bike the weekend away

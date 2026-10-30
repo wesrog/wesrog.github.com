@@ -6,5 +6,3 @@ tags:
   - conferences
   - status
 ---
-
-looking for an extra RubyConf ticket

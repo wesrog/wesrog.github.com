@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7npr8skezOhd7X0Eo1_1280.jpg)
-
-**View From My Old Apt**

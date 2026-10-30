@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7ib0uz2ksUNypv4go1_1280.jpg)
-
-**Splitting and Weathered**

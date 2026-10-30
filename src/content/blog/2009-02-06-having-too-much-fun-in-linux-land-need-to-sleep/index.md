@@ -5,5 +5,3 @@ tags:
   - linux
   - status
 ---
-
-Having too much fun in linux land. Need to sleep…

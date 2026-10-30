@@ -5,5 +5,3 @@ tags:
   - music
   - status
 ---
-
-Best new genre of the year “Apopcalypso”

@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./tumblr_kt6hc6aftY1qz70lno1_1280.jpg)
-
-**Curried sweet potatoes with Spinach and chickpeas**

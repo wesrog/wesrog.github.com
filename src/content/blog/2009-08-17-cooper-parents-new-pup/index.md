@@ -7,6 +7,5 @@ tags:
 
 ![](./tumblr_kohz8mwNcM1qz70lno1_1280.jpg)
 
-**Cooper:**
 
 Parents’ new pup

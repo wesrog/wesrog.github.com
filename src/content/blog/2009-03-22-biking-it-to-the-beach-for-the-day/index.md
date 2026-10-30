@@ -5,5 +5,3 @@ tags:
   - bicycling
   - status
 ---
-
-Biking it to the beach for the day

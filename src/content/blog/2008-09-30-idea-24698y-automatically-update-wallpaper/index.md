@@ -5,6 +5,4 @@ tags:
   - status
 ---
 
-Idea #24698y
-
 Automatically update wallpaper based on weather readings.

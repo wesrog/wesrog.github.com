@@ -5,5 +5,3 @@ tags:
   - music
   - status
 ---
-
-Wow, the Tim Hecker remix of Genghis Tron’s “Board Up the House” is blissful.

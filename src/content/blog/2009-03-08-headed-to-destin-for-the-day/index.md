@@ -5,5 +5,3 @@ tags:
   - travel
   - status
 ---
-
-Headed to destin for the day

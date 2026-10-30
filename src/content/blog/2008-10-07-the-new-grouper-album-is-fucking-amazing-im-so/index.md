@@ -5,5 +5,3 @@ tags:
   - music
   - status
 ---
-
-The new Grouper album is fucking amazing. I’m so glad iTunes had it!

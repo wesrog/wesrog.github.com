@@ -5,5 +5,3 @@ tags:
   - rails
   - status
 ---
-
-Tweaking/upgrading passenger

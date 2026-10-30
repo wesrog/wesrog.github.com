@@ -5,5 +5,3 @@ tags:
   - mac
   - status
 ---
-
-warranty expires today on my MacBook Pro… still debating AppleCare or not :

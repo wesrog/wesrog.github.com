@@ -5,5 +5,3 @@ tags:
   - software
   - status
 ---
-
-checking out Songbird 1.0rc1

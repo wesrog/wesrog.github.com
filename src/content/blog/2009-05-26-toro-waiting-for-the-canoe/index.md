@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7ny51gnkFNvGCulGo1_1280.jpg)
-
-**Toro waiting for the canoe**

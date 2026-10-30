@@ -5,5 +5,3 @@ tags:
   - food
   - status
 ---
-
-Homemade pizza FTW

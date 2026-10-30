@@ -5,7 +5,5 @@ tags:
   - bicycling
   - photography
 ---
+
 ![](./tumblr_l3y5wfDYsV1qz70lno1_1280.jpg)  
-
-Bikes galore at Cirque Du Cycling
-

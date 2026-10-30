@@ -5,5 +5,3 @@ tags:
   - music
   - status
 ---
-
-Nigerian psychedelic rock rocks.

@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7eciq4u04D1ly52Co1_1280.jpg)
-
-**The End of Summer**

@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7gcqc15bcEAcC2x9o1_1280.jpg)
-
-**Looking out from my bedroom**

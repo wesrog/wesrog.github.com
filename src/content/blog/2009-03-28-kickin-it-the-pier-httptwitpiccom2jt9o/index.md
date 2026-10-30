@@ -6,6 +6,4 @@ tags:
   - status
 ---
 
-Kickin it @ the pier
-
 ![Relaxing on the grass at the pier](./4283628.jpg)

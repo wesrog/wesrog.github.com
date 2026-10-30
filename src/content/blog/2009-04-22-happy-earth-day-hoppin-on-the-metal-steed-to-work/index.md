@@ -5,5 +5,3 @@ tags:
   - bicycling
   - status
 ---
-
-Happy earth day! Hoppin on the metal steed to work

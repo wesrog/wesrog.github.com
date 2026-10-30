@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./tumblr_koopfyyMSo1qz70lno1_1280.jpg)
-
-**Beach in the Evening**

@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7fmvz2380zO5yTrRo1_1280.jpg)
-
-**Lily Watchin’ TV**

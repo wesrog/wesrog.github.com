@@ -7,6 +7,5 @@ tags:
 
 ![](./tumblr_ksyii3RrfK1qz70lno1_1280.jpg)
 
-**Calm Water:**
 
 The water was like glass.

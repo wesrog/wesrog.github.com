@@ -5,5 +5,3 @@ tags:
   - movies
   - status
 ---
-
-About to watch the final X-Files episode :

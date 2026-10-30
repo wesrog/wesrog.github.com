@@ -5,5 +5,3 @@ tags:
   - life
   - status
 ---
-
-Starting the music library migration… should only take me a month or so :P

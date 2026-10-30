@@ -7,7 +7,6 @@ tags:
 
 ![](./tumblr_ku8n1qic1H1qz70lno1_1280.jpg)
 
-**Homestyle Salmon Curry with Indian Style Basmati Rice:**
 
 This time I used yellow onions which made a huge difference. They brown better than white onions and are more flavorful. Also, I neglected the “salt to taste” part last time. I made sure not to miss that step this time. The salmon was seasoned with salt and pepper and seared on both sides to introduce a nice crust. It was then transferred to the curry for the remainder of the cooking time.  
   

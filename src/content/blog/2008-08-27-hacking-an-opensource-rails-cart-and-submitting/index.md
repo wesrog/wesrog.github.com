@@ -6,5 +6,3 @@ tags:
   - opensource
   - status
 ---
-
-Hacking an opensource rails cart and submitting patches.

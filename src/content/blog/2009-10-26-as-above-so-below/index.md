@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./tumblr_ks52doBV2Z1qz70lno1_1280.jpg)
-
-**As Above, So Below**

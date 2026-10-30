@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./tumblr_kt5ullXbZH1qz70lno1_640.jpg)
-
-**Fish curry and palak paneer plated**

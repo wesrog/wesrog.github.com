@@ -5,5 +5,3 @@ tags:
   - politics
   - status
 ---
-
-My vote is in!

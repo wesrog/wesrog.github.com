@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./tumblr_ks52dtxfVv1qz70lno1_1280.jpg)
-
-**Stopping on the Way**

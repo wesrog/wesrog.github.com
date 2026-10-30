@@ -5,5 +5,3 @@ tags:
   - health
   - status
 ---
-
-Having serious shoulder pains. Headed to dr

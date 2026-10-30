@@ -5,5 +5,3 @@ tags:
   - bicycling
   - status
 ---
-
-Amazing day for a bike ride.

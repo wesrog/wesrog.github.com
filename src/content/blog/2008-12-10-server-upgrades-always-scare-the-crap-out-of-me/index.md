@@ -5,5 +5,3 @@ tags:
   - software
   - status
 ---
-
-Server upgrades always scare the crap out of me. Not healthy…

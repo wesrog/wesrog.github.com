@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./tumblr_kt5ulpArC81qz70lno1_1280.jpg)
-
-**Fish curry and palak paneer cooking**

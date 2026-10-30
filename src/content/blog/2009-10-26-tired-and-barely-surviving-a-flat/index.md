@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./tumblr_ks52djwi4i1qz70lno1_1280.jpg)
-
-**Tired and Barely Surviving a Flat**

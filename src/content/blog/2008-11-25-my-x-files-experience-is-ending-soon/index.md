@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7gqk9vgnVduQNU4uo1_400.png)
-
-My X-Files experience is ending soon…

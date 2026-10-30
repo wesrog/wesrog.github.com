@@ -7,5 +7,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7ftvio2uWuVEPoCko1_500.png)
-
-Frosty beverage!

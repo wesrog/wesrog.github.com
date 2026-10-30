@@ -5,5 +5,3 @@ tags:
   - webdev
   - status
 ---
-
-Excited that we are using S3 for a new project.

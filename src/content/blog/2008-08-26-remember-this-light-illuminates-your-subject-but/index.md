@@ -5,5 +5,3 @@ tags:
   - photography
   - status
 ---
-
-Remember this, light illuminates your subject but shadow defines it.

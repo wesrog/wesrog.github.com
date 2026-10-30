@@ -5,5 +5,3 @@ tags:
   - gaming
   - status
 ---
-
-Finally hit 60 and got a swift mount! woot!

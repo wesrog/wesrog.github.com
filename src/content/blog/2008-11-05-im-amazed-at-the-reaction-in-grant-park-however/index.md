@@ -5,5 +5,3 @@ tags:
   - politics
   - status
 ---
-
-i’m amazed at the reaction in Grant Park, however not surprised :)

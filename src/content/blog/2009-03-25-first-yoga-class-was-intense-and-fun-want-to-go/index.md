@@ -5,5 +5,3 @@ tags:
   - health
   - status
 ---
-
-First yoga class was intense and fun. Want to go again for more

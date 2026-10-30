@@ -6,5 +6,3 @@ tags:
 ---
 
 ![](./aXuJeHmz7npr8vanQGftoovfo1_1280.jpg)
-
-**Sunset Beach**

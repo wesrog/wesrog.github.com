@@ -5,5 +5,3 @@ tags:
   - food
   - status
 ---
-
-Making shrimp vindaloo for my parents tonight. Goan food ftw.

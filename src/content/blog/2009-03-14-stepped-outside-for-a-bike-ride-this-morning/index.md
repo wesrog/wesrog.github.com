@@ -5,5 +5,3 @@ tags:
   - bicycling
   - status
 ---
-
-Stepped outside for a bike ride this morning, found $20 on the ground. Good day.
