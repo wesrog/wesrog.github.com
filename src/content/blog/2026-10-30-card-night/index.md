@@ -14,7 +14,8 @@ each variant listed with its rules and your win/loss record right there. I playe
 a lot of Streets and Alleys.
 
 Mondo Solitaire is long gone, so we built our own. It's called
-[Card Night](/cardnight/), and it's for iPhone and iPad.
+[Card Night](/cardnight/), and it's for iPhone and iPad. You can
+[get it on the App Store](https://apps.apple.com/us/app/card-nite/id6817533189).
 
 The lobby is a nod to Mondo: a wooden table, an info panel up top, and one row
 per variant with the variant in brackets, like "Klondike [Vegas]" or
