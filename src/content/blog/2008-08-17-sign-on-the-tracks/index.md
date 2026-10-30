@@ -5,4 +5,4 @@ tags:
   - photography
 ---
 
-![](./aXuJeHmz7cqlfats10iWjmIy_1280.jpg)
+![](../2008-08-17-photo-walk/aXuJeHmz7cqlfats10iWjmIy_1280.jpg)
