@@ -14,9 +14,21 @@ First, make your custom routes file in config/
 
 #### config/routes\_custom.rb
 
+```ruby
+ActionController::Routing::Routes.draw do |map|
+  map.namespace :admin do |admin|
+    admin.resources :manufacturers
+  end
+end
+```
+
 Next, add an initializer to load that routes file on boot:
 
 #### config/initializers/load\_custom\_routes.rb
+
+```ruby
+ActionController::Routing::Routes.add_configuration_file(File.join(RAILS_ROOT, 'config', 'routes_custom.rb'))
+```
 
 If you clone from a master repo for custom projects, this is ideal as it won’t
 muck up the core routes file annoying you with conflicts and such.
