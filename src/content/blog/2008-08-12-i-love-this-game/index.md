@@ -5,4 +5,6 @@ tags:
   - screenshots
 ---
 
-![](./aXuJeHmz7cjns7ghhjWeQVep_400.jpg)
+![Mondo Solitaire on the iPhone, playing Streets and Alleys](./aXuJeHmz7cjns7ghhjWeQVep_400.jpg)
+
+Mondo Solitaire on the iPhone.
