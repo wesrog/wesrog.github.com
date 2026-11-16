@@ -41,7 +41,14 @@ const { title, description = 'Thoughts and waves from Wes Rogers.', noindex = fa
           const next = order[(order.indexOf(get()) + 1) % order.length];
           fallback = next;
           try { next === 'auto' ? localStorage.removeItem('theme') : localStorage.setItem('theme', next); } catch {}
-          document.documentElement.dataset.theme = next;
+          const root = document.documentElement;
+          // Fade only on a click, never on load or navigation, and not for reduced motion.
+          if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            root.classList.add('theme-fade');
+            clearTimeout(window.__themeFadeTimer);
+            window.__themeFadeTimer = setTimeout(() => root.classList.remove('theme-fade'), 400);
+          }
+          root.dataset.theme = next;
         });
       })();
     </script>
