@@ -1,13 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection, render } from 'astro:content';
-
-const postSlug = (id: string) => id.replace(/\/index$/, '');
+import { render } from 'astro:content';
+import { getFeedPosts, postSlug } from '../lib/posts';
 
 export async function getStaticPaths({ paginate }) {
-  const posts = (await getCollection('blog', ({ data }) => !data.draft && !data.tags.includes('status')))
-    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-  return paginate(posts, { pageSize: 20 });
+  return paginate(await getFeedPosts(), { pageSize: 20 });
 }
 
 const { page } = Astro.props;
@@ -19,7 +16,7 @@ const rendered = await Promise.all(page.data.map(async post => {
 ---
 <BaseLayout title="WR">
   <div class="wrapper">
-    <p class="intro">Listen to <a href="/tags/music-composition/">music</a>, look at <a href="/tags/photography/">photography</a>, <a href="/tags/bicycling/">bicycling</a>, or read ramblings below.</p>
+    <p class="intro">Listen to <a href="/tags/music-composition/">music</a>, look at <a href="/tags/photography/">photography</a>, <a href="/tags/bicycling/">bicycling</a>, or read ramblings below. Looking for something older? <a href="/archive/">Browse all {page.total} posts</a>.</p>
     <ul class="post-list">
       {rendered.map(({ post, Content }) => (
         <li>
@@ -46,7 +43,7 @@ const rendered = await Promise.all(page.data.map(async post => {
     </ul>
     <nav class="pagination">
       {page.url.prev ? <a href={page.url.prev}>← Newer</a> : <span />}
-      <span>Page {page.currentPage} of {page.lastPage}</span>
+      <span>Page {page.currentPage} of {page.lastPage} · <a href="/archive/">Archive</a></span>
       {page.url.next ? <a href={page.url.next}>Older →</a> : <span />}
     </nav>
   </div>
@@ -60,12 +57,13 @@ const rendered = await Promise.all(page.data.map(async post => {
   border-bottom: 1px solid var(--color-border);
 }
 .post-list li:last-child { border-bottom: none; }
+.post-header { gap: 0.2em 0.9em; }
 time { display: block; }
-h2 { margin: 0.25em 0 0.5em; font-size: 1.25em; }
+h2 { margin: 0.2em 0 0.5em; font-size: 1.35em; }
 a:not(.post-tag) { text-decoration: none; color: var(--color-text); }
 a:hover h2 { text-decoration: underline; }
 a:not(.post-tag):visited { color: var(--color-text); }
-.intro { color: var(--color-muted); font-size: 0.95em; margin: 0 0 calc(var(--spacing) * 1.5); }
+.intro { color: var(--color-muted); font-size: 0.9em; max-width: 34em; margin: 0 0 calc(var(--spacing) * 1.5); }
 .intro a { color: var(--color-link); }
 .intro a:visited { color: var(--color-link-visited); }
 .post-content { font-size: 0.9em; }

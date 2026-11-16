@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getFeedPosts, postSlug } from '../lib/posts';
+
+const posts = await getFeedPosts();
+const years = new Map<number, typeof posts>();
+for (const post of posts) {
+  const y = post.data.date.getUTCFullYear();
+  if (!years.has(y)) years.set(y, []);
+  years.get(y)!.push(post);
+}
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+---
+<BaseLayout title="Archive" description="Every post on WR, by year.">
+  <div class="wrapper archive">
+    <h1>Archive</h1>
+    <p class="lede">{posts.length} posts since {[...years.keys()].at(-1)}. Status updates are under <a href="/tags/status/">#status</a>, and topics under <a href="/tags/">tags</a>.</p>
+
+    <div class="tools">
+      <label class="sr-only" for="archive-filter">Filter posts</label>
+      <input id="archive-filter" type="search" placeholder="Filter by title or tag…" autocomplete="off" />
+      <nav class="years" aria-label="Jump to year">
+        {[...years.entries()].map(([y, list]) => (
+          <a href={`#y${y}`} data-year={y}>{y}<span class="n">{list.length}</span></a>
+        ))}
+      </nav>
+    </div>
+
+    <p class="empty" hidden>No posts match.</p>
+
+    {[...years.entries()].map(([y, list]) => (
+      <section class="year" id={`y${y}`} data-year={y}>
+        <h2>{y}</h2>
+        <ul>
+          {list.map(post => (
+            <li data-search={`${post.data.title} ${post.data.tags.join(' ')}`.toLowerCase()}>
+              <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time>
+              <a href={`/blog/${postSlug(post.id)}/`}>{post.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</BaseLayout>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const input = document.getElementById('archive-filter') as HTMLInputElement | null;
+    if (!input) return;
+    const rows = [...document.querySelectorAll<HTMLLIElement>('.archive li[data-search]')];
+    const sections = [...document.querySelectorAll<HTMLElement>('.archive .year')];
+    const empty = document.querySelector<HTMLElement>('.archive .empty')!;
+    const apply = () => {
+      const terms = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+      let shown = 0;
+      for (const li of rows) {
+        const hit = terms.every(t => li.dataset.search!.includes(t));
+        li.hidden = !hit;
+        if (hit) shown++;
+      }
+      for (const s of sections) {
+        const any = s.querySelector('li:not([hidden])') !== null;
+        s.hidden = !any;
+        const chip = document.querySelector<HTMLElement>(`.years a[data-year="${s.dataset.year}"]`);
+        if (chip) chip.hidden = !any;
+      }
+      empty.hidden = shown > 0;
+    };
+    input.addEventListener('input', apply);
+    apply();
+  });
+</script>
+
+<style>
+h1 { margin: 0 0 0.3em; }
+.lede { color: var(--color-muted); font-size: 0.9em; margin: 0 0 var(--spacing); }
+.tools {
+  background: var(--color-bg);
+  padding: 0.75em 0;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid var(--color-border);
+}
+input[type="search"] {
+  width: 100%;
+  font: inherit;
+  font-size: 0.9em;
+  color: var(--color-text);
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.55em 0.8em;
+}
+input[type="search"]:focus { outline: 2px solid var(--color-link); outline-offset: -1px; }
+.years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 0.9em;
+  margin-top: 0.7em;
+  font-size: 0.8em;
+}
+.years a, .years a:visited { color: var(--color-text); text-decoration: none; font-variant-numeric: tabular-nums; }
+.years a:hover { color: var(--color-link); }
+.years .n { color: var(--color-muted); margin-left: 0.25em; font-size: 0.85em; }
+@media (min-width: 700px) {
+  .tools { position: sticky; top: 0; z-index: 5; }
+  .year { scroll-margin-top: 8em; }
+}
+.year h2 {
+  font-size: 1em;
+  color: var(--color-muted);
+  margin: 1.6em 0 0.4em;
+  font-variant-numeric: tabular-nums;
+}
+ul { list-style: none; margin: 0; padding: 0; }
+li {
+  display: grid;
+  grid-template-columns: 4.2em 1fr;
+  gap: 0.8em;
+  padding: 0.3em 0;
+  align-items: baseline;
+}
+li time { color: var(--color-muted); font-size: 0.8em; font-variant-numeric: tabular-nums; }
+li a, li a:visited { color: var(--color-text); text-decoration: none; }
+li a:hover { color: var(--color-link); text-decoration: underline; }
+.empty { color: var(--color-muted); }
+</style>

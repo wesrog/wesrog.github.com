@@ -1,17 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
+import { postSlug } from '../../lib/posts';
 
 export async function getStaticPaths() {
-  const postSlug = (id: string) => id.replace(/\/index$/, '');
-  const posts = await getCollection('blog');
-  return posts.map(post => ({
-    params: { slug: postSlug(post.id) },
-    props: { post },
-  }));
+  const posts = (await getCollection('blog'))
+    .sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+  // Earlier/later links step through posts of the same kind (status updates with status updates).
+  const isStatus = (p: typeof posts[number]) => p.data.tags.includes('status');
+  const sequence = (p: typeof posts[number]) =>
+    posts.filter(q => !q.data.draft && isStatus(q) === isStatus(p));
+  const link = (p?: typeof posts[number]) => p && { href: `/blog/${postSlug(p.id)}/`, title: p.data.title };
+  return posts.map(post => {
+    const seq = sequence(post);
+    const i = seq.indexOf(post);
+    return {
+      params: { slug: postSlug(post.id) },
+      props: {
+        post,
+        earlier: i > 0 ? link(seq[i - 1]) : undefined,
+        later: i >= 0 ? link(seq[i + 1]) : undefined,
+      },
+    };
+  });
 }
 
-const { post } = Astro.props;
+const { post, earlier, later } = Astro.props;
 const { Content } = await render(post);
 ---
 <BaseLayout title={post.data.title} description={post.data.description}>
@@ -33,11 +47,55 @@ const { Content } = await render(post);
     </header>
     <Content />
   </article>
+  {(earlier || later) && (
+    <nav class="wrapper post-nav" aria-label="More posts">
+      {earlier ? (
+        <a class="earlier" href={earlier.href} rel="prev">
+          <span class="dir">← Earlier</span>
+          <span class="title">{earlier.title}</span>
+        </a>
+      ) : <span />}
+      {later ? (
+        <a class="later" href={later.href} rel="next">
+          <span class="dir">Later →</span>
+          <span class="title">{later.title}</span>
+        </a>
+      ) : <span />}
+    </nav>
+  )}
 </BaseLayout>
 
 <style>
-h1 { margin-bottom: 0.25em; }
-header { margin-bottom: calc(var(--spacing) * 1.5); }
+h1 { margin: 0 0 0.3em; }
+header { margin-bottom: calc(var(--spacing) * 1.25); }
 article :global(img) { margin: 1em 0; }
 article :global(p) { margin: 0 0 1em; }
+
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-top: calc(var(--spacing) * 2);
+}
+.post-nav a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  padding: 0.9em 1em;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--color-text);
+  min-width: 0;
+}
+.post-nav a:visited { color: var(--color-text); }
+.post-nav a:hover { border-color: var(--color-link); }
+.post-nav .later { text-align: right; }
+.post-nav .dir { font-size: 0.75em; color: var(--color-muted); }
+.post-nav .title {
+  font-size: 0.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 </style>

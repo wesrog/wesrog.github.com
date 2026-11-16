@@ -1,33 +1,27 @@
+/* Theme: light and dark values live side by side via light-dark().
+   <html data-theme="auto|light|dark"> picks the scheme (set before paint in BaseLayout). */
 :root {
-  --color-text: #111;
-  --color-bg: #fdfdfd;
-  --color-link: #a67bc3;
-  --color-link-visited: #6d5180;
-  --color-muted: #828282;
-  --color-border: #e8e8e8;
-  --color-code-bg: #f5f5f5;
-  --color-header-top: #a67bc3;
+  color-scheme: light dark;
+  --color-text: light-dark(#1c1c1e, #e7e7e9);
+  --color-bg: light-dark(#fdfdfc, #141416);
+  --color-link: light-dark(#7d4fa3, #c7a3e6);
+  --color-link-visited: light-dark(#5f3d7d, #a98bc6);
+  --color-muted: light-dark(#6e6e73, #9a9aa1);
+  --color-border: light-dark(#e9e9e6, #2a2a2e);
+  --color-code-bg: light-dark(#f3f3f1, #1f1f23);
+  --color-header-top: var(--color-link);
   --color-overlay: rgba(0, 0, 0, 0.88);
   --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-size: 18px;
-  --line-height: 1.5;
-  --content-width: 800px;
-  --spacing: 30px;
+  --line-height: 1.6;
+  --content-width: 760px;
+  --spacing: 28px;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: #e0e0e0;
-    --color-bg: #1e1e1e;
-    --color-link: #c49ee0;
-    --color-link-visited: #9b7abf;
-    --color-muted: #aaa;
-    --color-border: #3a3a3a;
-    --color-code-bg: #2a2a2a;
-  }
-}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 
 body {
   font-family: var(--font-base);
@@ -37,9 +31,14 @@ body {
   background-color: var(--color-bg);
   margin: 0;
   overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
 }
 
-a { color: var(--color-link); }
+a {
+  color: var(--color-link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
 a:visited { color: var(--color-link-visited); }
 
 .wrapper {
@@ -47,23 +46,27 @@ a:visited { color: var(--color-link-visited); }
   margin: 0 auto;
   padding: 0 var(--spacing);
 }
+@media (max-width: 600px) {
+  :root { --spacing: 20px; --font-size: 17px; }
+}
 
 /* Keep post text around 70 characters per line; images and galleries stay full width. */
 :is(article.wrapper, .post-content) > :is(p:not(:has(img, iframe)), ul, ol, blockquote, h2, h3) {
   max-width: 34em;
 }
 
-h1, h2, h3 { line-height: 1.2; }
+h1, h2, h3 { line-height: 1.25; letter-spacing: -0.01em; }
+h1 { font-size: 1.8em; }
 
-img { max-width: 100%; height: auto; display: block; }
+img { max-width: 100%; height: auto; display: block; border-radius: 4px; }
 
 iframe, embed, object { max-width: 100%; }
 
 audio { width: 100%; }
 
 pre, code {
-  font-size: 0.875em;
-  border-radius: 3px;
+  font-size: 0.85em;
+  border-radius: 4px;
 }
 code {
   background-color: var(--color-code-bg);
@@ -74,10 +77,10 @@ pre {
   overflow-x: auto;
 }
 pre code { padding: 0; background: none; }
-.astro-code { padding: var(--spacing); overflow-x: auto; }
+.astro-code { padding: calc(var(--spacing) * 0.75); overflow-x: auto; }
 
 blockquote {
-  border-left: 4px solid var(--color-border);
+  border-left: 2px solid var(--color-border);
   color: var(--color-muted);
   margin-left: 0;
   padding-left: 1em;
@@ -93,26 +96,28 @@ table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid var(--color-border); padding: 0.5em; }
 th { background-color: var(--color-code-bg); }
 
+::selection { background: color-mix(in srgb, var(--color-link) 25%, transparent); }
+
 .post-meta {
   color: var(--color-muted);
-  font-size: 0.875em;
+  font-size: 0.8em;
+  font-variant-numeric: tabular-nums;
 }
 
-.post-header { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4em 1em; }
-.post-tags { display: inline-flex; flex-wrap: wrap; gap: 0.4em; }
+.post-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.3em 0.9em; }
+.post-tags { display: inline-flex; flex-wrap: wrap; gap: 0.2em 0.7em; }
 .post-tag {
   color: var(--color-muted);
   font-size: 0.8em;
   text-decoration: none;
-  padding: 0.15em 0.6em;
-  border-radius: 999px;
-  border: 1px solid var(--color-border);
-  background-color: var(--color-code-bg);
 }
+.post-tag::before { content: '#'; opacity: 0.6; }
 .post-tag:visited { color: var(--color-muted); }
-.post-tag:hover {
-  color: var(--color-link);
-  border-color: var(--color-link);
+.post-tag:hover { color: var(--color-link); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
 
 body.player-active { padding-bottom: 80px; }
